@@ -1,0 +1,89 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: {{ include "eric-oss-endc-flm-poc.fullname" . }}-create-bucket
+  labels:
+    {{- include "eric-oss-endc-flm-poc.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "-5"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+    {{- include "eric-oss-endc-flm-poc.prometheus" . | nindent 4 }}
+spec:
+  template:
+    metadata:
+      labels:
+        {{- include "eric-oss-endc-flm-poc.labels" . | nindent 8 }}
+        eric-data-object-storage-mn-access: "true"
+      annotations:
+        {{- include "eric-oss-endc-flm-poc.annotations" . | nindent 8 }}
+    spec:
+      {{- if include "eric-oss-endc-flm-poc.pullSecret" . }}
+      imagePullSecrets:
+        - name: {{ include "eric-oss-endc-flm-poc.pullSecret" . | quote}}
+      {{- end }}
+      securityContext:
+        fsGroup: {{ include "eric-oss-endc-flm-poc.fsGroup.coordinated" . }}
+      restartPolicy: {{ .Values.restartPolicy.job }}
+      containers:
+        - name: create-bucket
+          image: {{ template "eric-oss-endc-flm-poc.objectStoreClientImagePath" . }}
+          imagePullPolicy: {{ template "eric-oss-endc-flm-poc.registryImagePullPolicy" . }}
+          command: ["eosc"]
+          args: ["mb", "bkname", {{ .Values.configuration.objectStore.bucket | quote }}]
+          securityContext:
+            allowPrivilegeEscalation: false
+            privileged: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop:
+                - all
+          env:
+            - name: TLS_ENABLED
+              value: "false"
+            - name: STORAGE_SERVER_DNS
+              value: {{ .Values.configuration.objectStore.name | quote }}
+            - name: MINIO_ROOT_USER
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.configuration.objectStore.secret | quote }}
+                  key: accesskey
+            - name: MINIO_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.configuration.objectStore.secret | quote }}
+                  key: secretkey
+          resources: {{- include "eric-oss-endc-flm-poc.objectStoreClientImageResourceAllocation" . | nindent 12 }}
+      nodeSelector: {{ include "eric-oss-endc-flm-poc.nodeSelector" . | nindent 6 -}}
+
+      {{- with .Values.terminationGracePeriodSeconds }}
+      terminationGracePeriodSeconds: {{- toYaml . | nindent 8 }}
+      {{- end }}
+
+      {{- with .Values.tolerations }}
+      tolerations: {{- toYaml . | nindent 8 }}
+      {{- end }}
+
+      {{- if (index .Values "podPriority" "eric-oss-endc-flm-poc" "priorityClassName") }}
+      priorityClassName: {{ (index .Values "podPriority" "eric-oss-endc-flm-poc" "priorityClassName") }}
+      {{- end }}
+
+      {{- with .Values.topologySpreadConstraints.deployment }}
+      topologySpreadConstraints: {{- toYaml . | nindent 8 }}
+      {{- end }}

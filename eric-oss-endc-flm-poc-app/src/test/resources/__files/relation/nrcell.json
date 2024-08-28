@@ -1,0 +1,51 @@
+{
+  "ManagedElement": [
+    {
+      "id": "ESS_737908_Textile_Centre",
+      "GNBCUCPFunction": [
+        {
+          "id": "1",
+          "attributes": {
+            "gNBId": "1037902",
+            "gNBIdLength": "23",
+            "pLMNId": {
+              "mcc": "525",
+              "mnc": "01"
+            }
+          },
+          "NRCellCU": [
+            {
+              "id": "10379021021",
+              "attributes": {
+                "cellLocalId": 1021,
+                "nCI": 8559264765,
+                "primaryPLMNId": {
+                  "mcc": "525",
+                  "mnc": "01"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "GNBDUFunction": [
+        {
+          "id": "1",
+          "attributes": {
+            "gNBId": "1037902",
+            "gNBIdLength": "23"
+          },
+          "NRCellDU": [
+            {
+              "id": "10379021021-1",
+              "attributes": {
+                "cellLocalId": 1021,
+                "nCI": 8559264765
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

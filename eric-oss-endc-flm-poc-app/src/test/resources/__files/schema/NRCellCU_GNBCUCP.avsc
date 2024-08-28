@@ -1,0 +1,592 @@
+{
+  "type": "record",
+  "name": "NRCellCU_GNBCUCP_1",
+  "namespace": "NR.RAN.PM_COUNTERS",
+  "fields": [
+    {
+      "name": "nodeFDN",
+      "type": "string"
+    },
+    {
+      "name": "elementType",
+      "type": "string"
+    },
+    {
+      "name": "ropBeginTime",
+      "type": "string"
+    },
+    {
+      "name": "ropEndTime",
+      "type": "string"
+    },
+    {
+      "name": "ropBeginTimeInEpoch",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "ropEndTimeInEpoch",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "dnPrefix",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "moFdn",
+      "type": "string"
+    },
+    {
+      "name": "suspect",
+      "type": "boolean"
+    },
+    {
+      "name": "pmCounters",
+      "type": {
+        "type": "record",
+        "name": "pmCounters",
+        "fields": [
+          {
+            "name": "pmEndcSetupUeSucc",
+            "type": {
+              "type": "record",
+              "name": "pmEndcSetupUeSucc",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmEndcSetupUeAtt",
+            "type": {
+              "type": "record",
+              "name": "pmEndcSetupUeAtt",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmEndcSgnbAdditionRequest",
+            "type": {
+              "type": "record",
+              "name": "pmEndcSgnbAdditionRequest",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmEndcSetupScgUeSucc",
+            "type": {
+              "type": "record",
+              "name": "pmEndcSetupScgUeSucc",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmRrcConnLevelSumEnDc",
+            "type": {
+              "type": "record",
+              "name": "pmRrcConnLevelSumEnDc",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmRrcConnLevelSamp",
+            "type": {
+              "type": "record",
+              "name": "pmRrcConnLevelSamp",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmRrcConnLevelMaxEnDc",
+            "type": {
+              "type": "record",
+              "name": "pmRrcConnLevelMaxEnDc",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmRrcConnLevelMaxNrDc",
+            "type": {
+              "type": "record",
+              "name": "pmRrcConnLevelMaxNrDc",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmRrcConnLevelSumNrDc",
+            "type": {
+              "type": "record",
+              "name": "pmRrcConnLevelSumNrDc",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmRrcConnLevelMaxSa",
+            "type": {
+              "type": "record",
+              "name": "pmRrcConnLevelMaxSa",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmRrcConnLevelSumSa",
+            "type": {
+              "type": "record",
+              "name": "pmRrcConnLevelSumSa",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmEbsEndcSetupDrbAtt",
+            "type": {
+              "type": "record",
+              "name": "pmEbsEndcSetupDrbAtt",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmEbsEndcSetupDrbSucc",
+            "type": {
+              "type": "record",
+              "name": "pmEbsEndcSetupDrbSucc",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmEbsEndcSetupScgDrbAtt",
+            "type": {
+              "type": "record",
+              "name": "pmEbsEndcSetupScgDrbAtt",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmEbsEndcSetupScgDrbSucc",
+            "type": {
+              "type": "record",
+              "name": "pmEbsEndcSetupScgDrbSucc",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmEbsEndcSetupScgUeAtt",
+            "type": {
+              "type": "record",
+              "name": "pmEbsEndcSetupScgUeAtt",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmEbsEndcSetupScgUeSucc",
+            "type": {
+              "type": "record",
+              "name": "pmEbsEndcSetupScgUeSucc",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmEbsEndcSetupUeAtt",
+            "type": {
+              "type": "record",
+              "name": "pmEbsEndcSetupUeAtt",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmEbsEndcSetupUeSucc",
+            "type": {
+              "type": "record",
+              "name": "pmEbsEndcSetupUeSucc",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmEbsRrcConnLevelSamp",
+            "type": {
+              "type": "record",
+              "name": "pmEbsRrcConnLevelSamp",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmEbsRrcConnLevelSumEnDc",
+            "type": {
+              "type": "record",
+              "name": "pmEbsRrcConnLevelSumEnDc",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmEndcSetupScgUeAtt",
+            "type": {
+              "type": "record",
+              "name": "pmEndcSetupScgUeAtt",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

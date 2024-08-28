@@ -1,0 +1,64 @@
+{
+  "inputAllowList1": {
+    "Enodebs": [
+      {
+        "fdn": "SubNetwork=Europe,SubNetwork=Ireland,SubNetwork=NR01gNodeBRadio00002,ManagedElement=NR01gNodeBRadio00002,ENodeBFunction=1"
+      }
+    ],
+    "EUtranCells": [
+      {
+        "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00002,ManagedElement=NR01gNodeBRadio00002,ENodeBFunction=1,EUtranCellFDD=eUtranCell00002-1"
+      }
+    ]
+  },
+  "expectedAllowList1": {
+    "Enodebs": [
+      {
+        "fdn": "SubNetwork=Europe,SubNetwork=Ireland,SubNetwork=NR01gNodeBRadio00002,ManagedElement=NR01gNodeBRadio00002,ENodeBFunction=1"
+      }
+    ],
+    "EUtranCells": [
+      {
+        "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00002,ManagedElement=NR01gNodeBRadio00002,ENodeBFunction=1,EUtranCellFDD=eUtranCell00002-1"
+      }
+    ]
+  },
+  "inputAllowList2": {
+    "Enodebs": [
+      {
+        "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00002"
+      },
+      {
+        "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00002,ManagedElement=NR01gNodeBRadio00002,ENodeBFunction=1"
+      }
+    ],
+    "EUtranCells": [
+      {
+        "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00002,ManagedElement=NR01gNodeBRadio00002,ENodeBFunction=1"
+      },
+      {
+        "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00002,ManagedElement=NR01gNodeBRadio00002,ENodeBFunction=1,EUtranCellFDD=eUtranCell00002-1"
+      }
+    ]
+  },
+  "expectedAllowList2": {
+    "Enodebs": [
+      {
+        "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00002"
+      }
+    ],
+    "EUtranCells": [
+      {
+        "fdn": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=NR01gNodeBRadio00002,ManagedElement=NR01gNodeBRadio00002,ENodeBFunction=1"
+      }
+    ]
+  },
+  "inputAllowList3": {
+    "Enodebs": [],
+    "EUtranCells": []
+  },
+  "expectedAllowList3": {
+    "Enodebs": [],
+    "EUtranCells": []
+  }
+}

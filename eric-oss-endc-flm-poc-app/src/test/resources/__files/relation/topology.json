@@ -1,0 +1,29 @@
+{
+  "query": {
+    "targetFilter": "/attributes",
+    "scopeFilter": "/attributes[@cellLocalId=1021] ; /GNBCUCPFunction/attributes[@gNBId=1037902 and @gNBIdLength=23and contains(@plmnId, '\"mcc\": \"525\"') and contains(@pLMNId, '\"mnc\": \"01\"')]"
+  },
+  "self": {
+    "href": "/topology/domains/RAN_LOGICAL/entities/NRCellDU?offset=0&limit=500&targetFilter=/attributes&scopeFilter=/attributes[@cellLocalId=1021] ; /GNBCUCPFunction/attributes[@gNBId=1037902 and @gNBIdLength=23and contains(@plmnId, '\"mcc\": \"525\"') and contains(@pLMNId, '\"mnc\": \"01\"')]"
+  },
+  "items": [
+    {
+      "ericsson-pre-r1-topologyandinventory-ran-logical:NRCellCU": [
+        {
+          "attributes": {
+            "fdn": "SubNetwork=ONRM_ROOT_MO,SubNetwork=ENB_CITYHALL,MeContext=ESS_737908_Textile_Centre,ManagedElement=ESS_737908_Textile_Centre,GNBCUCPFunction=1,NRCellCU=10379021021",
+            "nCI": 8502494205,
+            "nRTAC": 999,
+            "nRPCI": 741,
+            "cellLocalId": 1021,
+            "cmId": {
+              "cmHandle": "D82C8E788ECA217A81A3CD526FFBF796",
+              "resourceIdentifier": "/ericsson-enm-ComTop:ManagedElement[@id=ESS_737908_Textile_Centre]/ericsson-enm-GNBCUCP:GNBCUCPFunction[@id=1]/ericsson-enm-GNBCUCP:NRCellCU[@id=10379021021]"
+            }
+          },
+          "id": "urn:sha512:BDAF9E83B40D422678358AA2B02F72EC6D037D50C28DC1AAA9BB662271295C601133D7B229EA7FD7E0127E44E55B048B3698682309F7F1737743EE710096C1B2"
+        }
+      ]
+    }
+  ]
+}

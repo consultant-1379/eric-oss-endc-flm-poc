@@ -1,0 +1,12 @@
+{
+  "id": "{{ include "eric-oss-endc-flm-poc.fullname" . | replace "-" "_" }}_route",
+  "predicates": [{
+    "name": "Path",
+    "args": {
+      "_genkey_0": "/{{ .Values.gui.contextPath }}/**"
+    }
+  }],
+  "filters": [],
+  "uri": "http://{{ include "eric-oss-endc-flm-poc.fullname" . }}:8090",
+  "order": 0
+}

@@ -1,0 +1,86 @@
+/*******************************************************************************
+ * COPYRIGHT Ericsson 2024
+ *
+ *
+ *
+ * The copyright to the computer program(s) herein is the property of
+ *
+ * Ericsson Inc. The programs may be used and/or copied only with written
+ *
+ * permission from Ericsson Inc. or in accordance with the terms and
+ *
+ * conditions stipulated in the agreement/contract under which the
+ *
+ * program(s) have been supplied.
+ ******************************************************************************/
+package com.ericsson.oss.apps.model.pmrop;
+
+import com.ericsson.oss.apps.ncmp.model.ManagedObjectId;
+import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Entity;
+import lombok.*;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.avro.generic.GenericRecord;
+
+import java.io.Serial;
+import java.io.Serializable;
+import java.lang.reflect.InvocationTargetException;
+
+@Slf4j
+@Entity
+@Getter
+@Setter
+@ToString
+@NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+public class PmRopNRCellCU implements PmRop, Serializable {
+    @Serial
+    private static final long serialVersionUID = 2701081017609114686L;
+
+    @EmbeddedId
+    private MoRopId moRopId;
+
+    private double pmEndcSetupUeSucc;
+    private double pmEndcSetupUeAtt;
+    private double pmEndcSgnbAdditionRequest;
+    private double pmEndcSetupScgUeSucc;
+    private double pmRrcConnLevelSumEnDc;
+    private double pmRrcConnLevelSamp;
+    private double pmRrcConnLevelMaxEnDc;
+    private double pmRrcConnLevelMaxNrDc;
+    private double pmRrcConnLevelSumNrDc;
+    private double pmRrcConnLevelMaxSa;
+    private double pmRrcConnLevelSumSa;
+    private double pmEbsEndcSetupDrbAtt;
+    private double pmEbsEndcSetupDrbSucc;
+    private double pmEbsEndcSetupScgDrbAtt;
+    private double pmEbsEndcSetupScgDrbSucc;
+    private double pmEbsEndcSetupScgUeAtt;
+    private double pmEbsEndcSetupScgUeSucc;
+    private double pmEbsEndcSetupUeAtt;
+    private double pmEbsEndcSetupUeSucc;
+    private double pmEbsRrcConnLevelSamp;
+    private double pmEbsRrcConnLevelSumEnDc;
+    private double pmEndcSetupScgUeAtt;
+
+
+    @Override
+    public boolean fromAvroObject(GenericRecord avroObject) {
+        if (avroObject.getSchema().getName().equals("NRCellCU_GNBCUCP_1")) {
+            GenericRecord pmCounters = (GenericRecord) avroObject.get("pmCounters");
+            moRopId = new MoRopId(ManagedObjectId.of(avroObject.get("moFdn").toString()), (Long)avroObject.get("ropEndTimeInEpoch"));
+            try {
+                setPmData(pmCounters);
+            } catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+                log.error("Failed to set PmCounters for PmRopNRCellCU: {}", pmCounters.toString(), e);
+                return false;
+            }
+
+            return true;
+        }
+
+        log.error("Failed to parse PmRopNRCellCU: incorrect object type: {}", avroObject.toString());
+
+        return false;
+    }
+}

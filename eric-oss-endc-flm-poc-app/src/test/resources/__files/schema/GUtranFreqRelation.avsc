@@ -1,0 +1,88 @@
+{
+  "type": "record",
+  "name": "GUtranFreqRelation_1",
+  "namespace": "LTE.RAN.PM_COUNTERS",
+  "fields": [
+    {
+      "name": "nodeFDN",
+      "type": "string"
+    },
+    {
+      "name": "elementType",
+      "type": "string"
+    },
+    {
+      "name": "ropBeginTime",
+      "type": "string"
+    },
+    {
+      "name": "ropEndTime",
+      "type": "string"
+    },
+    {
+      "name": "ropBeginTimeInEpoch",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "ropEndTimeInEpoch",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "dnPrefix",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "moFdn",
+      "type": "string"
+    },
+    {
+      "name": "suspect",
+      "type": "boolean"
+    },
+    {
+      "name": "pmCounters",
+      "type": {
+        "type": "record",
+        "name": "pmCounters",
+        "fields": [
+          {
+            "name": "pmEndcDistrFreqSel",
+            "type": {
+              "type": "record",
+              "name": "pmEndcDistrFreqSel",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

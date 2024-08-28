@@ -1,0 +1,117 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+modelVersion: 2.0
+
+description: "eric-oss-endc-flm-poc-ui-build"
+
+docker-images:
+  - adp-nodejs-builder: armdocker.rnd.ericsson.se/proj-adp-cicd-drop/adp-nodejs-lts-builder-image:${env.NODEJS_BUILDER_TAG}
+  - adp-image-dr-check: armdocker.rnd.ericsson.se/proj-adp-cicd-drop/adp-image-dr-check:${env.IMAGE_DR_CHECK_TAG}
+
+import:
+  common: ../common-properties.yaml
+  common-rules: common_ruleset2.0.yaml
+
+properties:
+  - product-title: eric-oss-endc-flm-poc-ui
+  - nodejs-cache: "/opt/nodejs/cache"
+
+env:
+  - HOME
+  - PWD
+  - NODEJS_BUILDER_TAG (default=20.10.0-latest)
+  - IMAGE_DR_CHECK_TAG (default=latest)
+
+  # SonarQube
+  - SONAR_AUTH_TOKEN (default=)
+  - SONAR_HOST_URL (default=)
+
+var:
+  - version
+  - version-prefix
+  - commithash
+  - rstate
+  - image-full-name-internal
+  - image-dr-vm-args
+
+rules:
+  lint:
+      - task: lint-ui
+        docker-image: adp-nodejs-builder
+        docker-flags: &nodejs-docker-flags
+          - "--env HOME=${env.HOME}"
+          - "--env PLAYWRIGHT_BROWSERS_PATH="
+          - "--env SONAR_AUTH_TOKEN=${env.SONAR_AUTH_TOKEN}"
+          - "--env SONAR_HOST_URL=${env.SONAR_HOST_URL}"
+          - "--env SONAR_PROJECT_VERSION=${var.version-prefix}"
+          - "--volume ${env.HOME}:${env.HOME}"
+          - "--workdir ${env.PWD}/${product-title}/"
+        cmd:
+          - "npm install"
+          - "npm run lint"
+
+  build:
+    - task: build-ui
+      docker-image: adp-nodejs-builder
+      docker-flags: *nodejs-docker-flags
+      cmd:
+        - "rm -rf build/"
+        - "npm run build:dev"
+
+  test:
+    - task: generate-version-prefix
+      cmd: cat VERSION_PREFIX > .bob/var.version-prefix
+    - task: test-ui
+      docker-image: adp-nodejs-builder
+      docker-flags: *nodejs-docker-flags
+      cmd:
+        - "npx playwright install chromium firefox"
+        - "npm run test"
+
+  image:
+    - task: docker-build-ui
+      docker-image: adp-image-dr-check
+      docker-in-docker: socket
+      docker-flags:
+        - "--workdir ${env.PWD}/${product-title}/"
+      cmd: docker build .
+        --tag ${var.image-full-name-internal}-ui:${var.version}
+        --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+        --build-arg COMMIT=${var.commithash}
+        --build-arg RSTATE=${var.rstate}
+        --build-arg APP_VERSION=${var.version}
+        --build-arg IMAGE_PRODUCT_NUMBER=${common.ui-image-product-number}
+        --build-arg CBOS_IMAGE_REPO=${common.cbos-image-repo}
+        --build-arg CBOS_IMAGE_NAME=${common.cbos-image-name}
+        --build-arg CBOS_IMAGE_TAG=${common.cbos-image-version}
+    - task: ui-image-push-internal
+      cmd: docker push ${var.image-full-name-internal}-ui:${var.version}
+
+  image-dr-check:
+    - task: ui-image-dr-check
+      docker-image: adp-image-dr-check
+      docker-in-docker: socket
+      cmd: "image-dr-check
+            --image ${var.image-full-name-internal}-ui:${var.version}
+            --output .bob/check-image/ui/
+            ${var.image-dr-vm-args}"
+
+  publish:
+    - task: tag-internal-to-drop
+      cmd: docker tag ${var.image-full-name-internal}-ui:${var.version} ${common-rules.image-full-name}-ui:${var.version}
+    - task: ui-image-push-drop
+      cmd: docker push ${common-rules.image-full-name}-ui:${var.version}

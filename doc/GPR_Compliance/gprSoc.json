@@ -1,0 +1,1072 @@
+{
+  "$schema": "/doc/GPR_Compliance/gprSocSchema.json",
+  "areas": [
+    {
+      "name": "Security GPRs type 'Individual' (previously called Category 'A' Security GPRs)",
+      "link": "https://eteamspace.internal.ericsson.com/pages/viewpage.action?pageId=1134646939",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00120",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00121",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00252",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00346",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00349",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00502",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00503",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00504",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00115",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00347",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00122",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00501",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00766",
+          "status": "Not Compliant"
+        }
+      ]
+    },
+    {
+      "name": "Security GPRs type 'Framework' (previously called Category 'B' Security GPRs)",
+      "link": "https://eteamspace.internal.ericsson.com/pages/viewpage.action?pageId=1134646941",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00308",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00235",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00309",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00310",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00311",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00312",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00314",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00315",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00317",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00320",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00321",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00251",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00350",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00250",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00318",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00244",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00319",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00243",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00354",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00270",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00305",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00306",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00307",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00324",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00119",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00325",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00326",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00327",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00076",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00348",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00322",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00254",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00080",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00323",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00257",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00258",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00259",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00260",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00261",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00269",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00262",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00265",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00351",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00352",
+          "status": "Not Compliant"
+        }
+      ]
+    },
+    {
+      "name": "Privacy GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/Privacy+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00355",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00364",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00356",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00361",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00362",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00363",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00369",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00546",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00547",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00367",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00745",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00544",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00545",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00358",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00512",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00513",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00525",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00360",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00524",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00566",
+          "status": "Not Compliant"
+        }
+      ]
+    },
+    {
+      "name": "Design For Environment & Electromagnetics GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/pages/viewpage.action?pageId=1134647391",
+      "relevant": false,
+      "gprList": []
+    },
+    {
+      "name": "Electronic Software Licensing GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/Electronic+Software+Licensing+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00029",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00032",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00035",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00038",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00039",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00043",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00045",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00049",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00050",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00051",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00215",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00220",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00223",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00521",
+          "status": "Not Compliant"
+        }
+      ]
+    },
+    {
+      "name": "Marking & Labelling GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/pages/viewpage.action?pageId=1134647392",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00299",
+          "status": "Not compliant",
+          "JIRA_ID": "IDUN-119548"
+        },
+        {
+          "id": "65-0164/00300",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00539",
+          "status": "Not Relevant"
+        }
+      ]
+    },
+    {
+      "name": "Network Design and Optimization (NDO) GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/Network+Design+and+Optimization+%28NDO%29+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00446",
+          "status": "Compliant",
+          "comment": "Spring boot tracks statistics on web response codes, and UI authentication is EIC responsibility."
+        },
+        {
+          "id": "65-0164/00453",
+          "status": "Not compliant",
+          "JIRA_ID": "IDUN-119200"
+        },
+        {
+          "id": "65-0164/00454",
+          "status": "Not Relevant",
+          "EIC_inherited": true,
+          "comment": "Network connectivity is EIC platform responsibility."
+        },
+        {
+          "id": "65-0164/00455",
+          "status": "Not Relevant",
+          "comment": "rApps don't produce performance files and should never switch off performance monitoring."
+        }
+      ]
+    },
+    {
+      "name": "O&M GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/pages/viewpage.action?pageId=1134647389",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00138",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00139",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00140",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00143",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00166",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00171",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00172",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00398",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00399",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00400",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00402",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00404",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00408",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00429",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00430",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00431",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00432",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00433",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00434",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00436",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00437",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00438",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00441",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00445",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00447",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00449",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00457",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00496",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00508",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00511",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00560",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00561",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00562",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00563",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00564",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00565",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00758",
+          "status": "Not Compliant"
+        }
+      ]
+    },
+    {
+      "name": "Product Information GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/Product+Information+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00097",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00098",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00099",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00102",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00104",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00105",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00106",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00107",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00109",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00111",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00112",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00123",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00127",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00128",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00130",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00131",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00132",
+          "status": "Not Compliant"
+        }
+      ]
+    },
+    {
+      "name": "Product Quality & Characteristics GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/pages/viewpage.action?pageId=1134647386",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00279",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00301",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00302",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00303",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00375",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00376",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00377",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00378",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00379",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00380",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00381",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00383",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00384",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00385",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00387",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00388",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00390",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00395",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00411",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00413",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00414",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00415",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00416",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00417",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00418",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00419",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00420",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00421",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00428",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00435",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00439",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00440",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00442",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00450",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00451",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00452",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00462",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00464",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00514",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00749",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00750",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00751",
+          "status": "Not Compliant"
+        }
+      ]
+    },
+    {
+      "name": "Support GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/Support+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00370",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00391",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00393",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00401",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00403",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00405",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00406",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00409",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00410",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00412",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00424",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00456",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00526",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00527",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00528",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00529",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00530",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00531",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00533",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00535",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00536",
+          "status": "Not Relevant"
+        },
+        {
+          "id": "65-0164/00537",
+          "status": "Not Relevant"
+        }
+      ]
+    },
+    {
+      "name": "SW Change GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/SW+Change+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00386",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00389",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00392",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00394",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00396",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00397",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00422",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00423",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00448",
+          "status": "Not Compliant"
+        }
+      ]
+    },
+    {
+      "name": "Trade Compliance GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/Trade+Compliance+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00292",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00343",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00407",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00541",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00542",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00543",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00747",
+          "status": "Not Compliant"
+        }
+      ]
+    },
+    {
+      "name": "User Experience GPRs",
+      "link": "https://eteamspace.internal.ericsson.com/display/ACD/User+Experience+GPRs",
+      "relevant": true,
+      "gprList": [
+        {
+          "id": "65-0164/00567",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00568",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00569",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00570",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00571",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00572",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00573",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00574",
+          "status": "Not Compliant"
+        },
+        {
+          "id": "65-0164/00575",
+          "status": "Not Compliant"
+        }
+      ]
+    }
+  ]
+}

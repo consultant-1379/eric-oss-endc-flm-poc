@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "areas": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "link": {
+              "type": "string"
+            },
+            "relevant": {
+              "type": "boolean"
+            },
+            "gprList": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "comment": {
+                      "type": "string"
+                    },
+                    "JIRA_ID": {
+                      "type": "string"
+                    },
+                    "tags": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "status"
+                  ]
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string",
+                      "enum": [
+                        "Not Relevant",
+                        "Not Applicable",
+                        "Not Compliant",
+                        "Partially Compliant",
+                        "Fully Compliant"
+                      ]
+                    },
+                    "comment": {
+                      "type": "string"
+                    },
+                    "JIRA_ID": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "status"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "name",
+            "link",
+            "relevant",
+            "gprList"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "areas"
+  ]
+}

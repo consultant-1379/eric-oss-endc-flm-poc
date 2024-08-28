@@ -1,0 +1,688 @@
+{
+  "type": "record",
+  "name": "NRCellDU_GNBDU_1",
+  "namespace": "NR.RAN.PM_COUNTERS",
+  "fields": [
+    {
+      "name": "nodeFDN",
+      "type": "string"
+    },
+    {
+      "name": "elementType",
+      "type": "string"
+    },
+    {
+      "name": "ropBeginTime",
+      "type": "string"
+    },
+    {
+      "name": "ropEndTime",
+      "type": "string"
+    },
+    {
+      "name": "ropBeginTimeInEpoch",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "ropEndTimeInEpoch",
+      "type": [
+        "null",
+        "long"
+      ],
+      "default": null
+    },
+    {
+      "name": "dnPrefix",
+      "type": [
+        "null",
+        "string"
+      ],
+      "default": null
+    },
+    {
+      "name": "moFdn",
+      "type": "string"
+    },
+    {
+      "name": "suspect",
+      "type": "boolean"
+    },
+    {
+      "name": "pmCounters",
+      "type": {
+        "type": "record",
+        "name": "pmCounters",
+        "fields": [
+          {
+            "name": "pmCellDowntimeAuto",
+            "type": {
+              "type": "record",
+              "name": "pmCellDowntimeAuto",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmCellDowntimeMan",
+            "type": {
+              "type": "record",
+              "name": "pmCellDowntimeMan",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmMacVolDl",
+            "type": {
+              "type": "record",
+              "name": "pmMacVolDl",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmMacVolUl",
+            "type": {
+              "type": "record",
+              "name": "pmMacVolUl",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmPdschAvailTime",
+            "type": {
+              "type": "record",
+              "name": "pmPdschAvailTime",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmPuschAvailTime",
+            "type": {
+              "type": "record",
+              "name": "pmPuschAvailTime",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmActiveUeDlSum",
+            "type": {
+              "type": "record",
+              "name": "pmActiveUeDlSum",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmActiveUeDlMax",
+            "type": {
+              "type": "record",
+              "name": "pmActiveUeDlMax",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmActiveUeDlSamp",
+            "type": {
+              "type": "record",
+              "name": "pmActiveUeDlSamp",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmActiveUeUlSum",
+            "type": {
+              "type": "record",
+              "name": "pmActiveUeUlSum",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmActiveUeUlMax",
+            "type": {
+              "type": "record",
+              "name": "pmActiveUeUlMax",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmActiveUeUlSamp",
+            "type": {
+              "type": "record",
+              "name": "pmActiveUeUlSamp",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmMacRBSymUsedPdcchTypeA",
+            "type": {
+              "type": "record",
+              "name": "pmMacRBSymUsedPdcchTypeA",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmMacRBSymUsedPdcchTypeB",
+            "type": {
+              "type": "record",
+              "name": "pmMacRBSymUsedPdcchTypeB",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmMacRBSymUsedPdschTypeA",
+            "type": {
+              "type": "record",
+              "name": "pmMacRBSymUsedPdschTypeA",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmMacRBSymUsedPdschTypeB",
+            "type": {
+              "type": "record",
+              "name": "pmMacRBSymUsedPdschTypeB",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmMacRBSymUsedPdschTypeABroadcasting",
+            "type": {
+              "type": "record",
+              "name": "pmMacRBSymUsedPdschTypeABroadcasting",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmMacRBSymCsiRs",
+            "type": {
+              "type": "record",
+              "name": "pmMacRBSymCsiRs",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmMacRBSymAvailDl",
+            "type": {
+              "type": "record",
+              "name": "pmMacRBSymAvailDl",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmMacRBSymUsedPuschTypeA",
+            "type": {
+              "type": "record",
+              "name": "pmMacRBSymUsedPuschTypeA",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmMacRBSymUsedPuschTypeB",
+            "type": {
+              "type": "record",
+              "name": "pmMacRBSymUsedPuschTypeB",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmMacRBSymAvailUl",
+            "type": {
+              "type": "record",
+              "name": "pmMacRBSymAvailUl",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmPdschSchedActivity",
+            "type": {
+              "type": "record",
+              "name": "pmPdschSchedActivity",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmPuschSchedActivity",
+            "type": {
+              "type": "record",
+              "name": "pmPuschSchedActivity",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmRlcDelayTimeDl",
+            "type": {
+              "type": "record",
+              "name": "pmRlcDelayTimeDl",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          },
+          {
+            "name": "pmMacPucchSrPuschGrantLatDistr",
+            "type": {
+              "type": "record",
+              "name": "pmMacPucchSrPuschGrantLatDistr",
+              "fields": [
+                {
+                  "name": "counterType",
+                  "type": "string",
+                  "default": "single"
+                },
+                {
+                  "name": "counterValue",
+                  "type": "double",
+                  "default": "NaN"
+                },
+                {
+                  "name": "isValuePresent",
+                  "type": "boolean",
+                  "default": false
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

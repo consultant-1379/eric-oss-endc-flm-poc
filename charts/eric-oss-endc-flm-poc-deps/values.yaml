@@ -1,0 +1,85 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+global:
+  security:
+    tls:
+      enabled: false
+  hooklauncher:
+    executor: integration
+
+eric-data-object-storage-mn:
+  mode: "standalone"
+  replicas: 1
+  networkPolicy:
+    enabled: false
+  autoEncryption:
+    enabled: false
+
+eric-data-coordinator-zk:
+  persistence:
+    persistentVolumeClaim:
+      enabled: false
+  service:
+    endpoints:
+      datacoordinatorzk:
+        tls:
+          verifyClientCertificate: optional
+  replicaCount: 1
+  global:
+    pullSecret: k8s-registry-secret
+
+eric-data-message-bus-kf:
+  replicaCount: 1
+  persistence:
+    persistentVolumeClaim:
+      enabled: false
+  global:
+    security:
+      sasl:
+        enabled: false
+    pullSecret: k8s-registry-secret
+  service:
+    endpoints:
+      dataCoordinator:
+        tls:
+          enforced: optional
+      messagebuskf:
+        tls:
+          verifyClientCertificate: optional
+        sasl:
+          enforced: optional
+
+eric-oss-dmm-kf-op-sz-kafka-bootstrap:
+  replicaCount: 1
+  persistence:
+    persistentVolumeClaim:
+      enabled: false
+  global:
+    security:
+      sasl:
+        enabled: false
+    pullSecret: k8s-registry-secret
+  service:
+    endpoints:
+      dataCoordinator:
+        tls:
+          enforced: optional
+      messagebuskf:
+        tls:
+          verifyClientCertificate: optional
+        sasl:
+          enforced: optional

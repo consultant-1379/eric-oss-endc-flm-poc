@@ -1,0 +1,18 @@
+{
+  "apps": [
+    {
+      "name": "traffic-optimizer",
+      "module": "traffic-optimizer",
+      "displayName": "Traffic Optimizer",
+      "type": "euisdk",
+      "route": "traffic-optimizer"
+    }
+  ],
+  "components": [
+    {
+      "name": "system-profile",
+      "module": "profile",
+      "version": "1.0.0"
+    }
+  ]
+}

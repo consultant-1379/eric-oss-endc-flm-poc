@@ -1,0 +1,11 @@
+stage-marker-init:
+  - name: custom_ui_lint.Jenkinsfile
+stage-marker-build:
+  - name: custom_ui_build.Jenkinsfile
+  - name: custom_ui_test.Jenkinsfile
+stage-marker-image:
+  - name: custom_ui_image.Jenkinsfile
+stage-marker-helm:
+  - name: custom_install_deps.Jenkinsfile
+stage-marker-publish:
+  - name: custom_ui_publish.Jenkinsfile

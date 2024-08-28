@@ -1,0 +1,522 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+openapi: "3.0.2"
+info:
+  x-api-id: 3e43d9fe-1fc9-4e1c-af1a-594dfde601f2
+  x-audience: external-public
+  description: "ENDC FLM rApp prototype"
+  version: "0.0.1"
+  title: "ENDC FLM rApp prototype"
+  license:
+    name: "COPYRIGHT Ericsson 2024"
+    url: "https://www.ericsson.com/en/legal"
+  termsOfService: "https://www.ericsson.com/en/legal"
+  contact:
+    email: "Team Fremen<IDUN_rAppPrototypeTeam@ericsson.onmicrosoft.com>"
+paths:
+  /v1/topology/lte/nodes:
+    get:
+      tags:
+        - "topology"
+      operationId: "getAllNodeFdn"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Fdn"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Message"
+        default:
+          description: "Internal Server Error"
+  /v1/topology/lte/cells:
+    get:
+      tags:
+        - "topology"
+      operationId: "getAllCellFdn"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Fdn"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Message"
+        default:
+          description: "Internal Server Error"
+  /v1/trigger/rop:
+    post:
+      tags:
+        - "triggers"
+      summary: ""
+      operationId: "triggerRopLoading"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RopTriggerRequest"
+      responses:
+        "201":
+          description: "Task requested"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Message"
+        default:
+          description: "Internal Server Error"
+
+
+  /v1/cm/lte/allowlist:
+    put:
+      tags:
+        - "cm"
+      summary: "upload an allowed LTE list by operators"
+      operationId: "putLTEAllowList"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AllowList"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AllowList"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AllowList"
+        default:
+          description: "Internal Server Error"
+    get:
+      tags:
+        - "cm"
+      summary: "Get the allowed LTE list "
+      operationId: "getLTEAllowList"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AllowList"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Message"
+        default:
+          description: "Internal Server Error"
+
+  /v1/pm/metrics/nrcellcu:
+    get:
+      tags:
+        - "pm"
+      summary: "Get NR CellCU Counters"
+      operationId: "getNRCellCUCounters"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RopData"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Message"
+        default:
+          description: "Internal Server Error"
+  /v1/pm/metrics/nrcelldu:
+    get:
+      tags:
+        - "pm"
+      summary: "Get NR CellDU Counters"
+      operationId: "getNRCellDUCounters"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RopData"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Message"
+        default:
+          description: "Internal Server Error"
+  /v1/pm/metrics/eutrancell:
+    get:
+      tags:
+        - "pm"
+      summary: "Get NR EUtranCell Counters"
+      operationId: "getEUtranCellCounters"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RopData"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Message"
+        default:
+          description: "Internal Server Error"
+  /v1/pm/metrics/gnbdufunction:
+    get:
+      tags:
+        - "pm"
+      summary: "Get NR GNBDUFunction Counters"
+      operationId: "getGNBDUFunctionCounters"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RopData"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Message"
+        default:
+          description: "Internal Server Error"
+  /v1/pm/metrics/gutrancellrelation:
+    get:
+      tags:
+        - "pm"
+      summary: "Get NR GUtranCellRelation Counters"
+      operationId: "getGUtranCellRelationCounters"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RopData"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Message"
+        default:
+          description: "Internal Server Error"
+  /v1/pm/metrics/gutranfreqrelation:
+    get:
+      tags:
+        - "pm"
+      summary: "Get NR GUtranFreqRelation Counters"
+      operationId: "getGUtranFreqRelationCounters"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RopData"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Message"
+        default:
+          description: "Internal Server Error"
+
+  /v1/reports:
+    get:
+      tags:
+        - "reports"
+      summary: "Get Report Data"
+      operationId: "getReports"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReportDataRequest"
+      responses:
+        "200":
+          description: "OK"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RopReportData"
+        "400":
+          description: "Invalid request"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Message"
+        default:
+          description: "Internal Server Error"
+
+components:
+  schemas:
+    Message:
+      type: object
+      required:
+        - message
+      properties:
+        message:
+          type: string
+    RopTriggerRequest:
+      type: object
+      required:
+        - customerId
+      properties:
+        timeStamp:
+          type: integer
+          format: int64
+          description: "hit this epoch (in milliseconds)."
+          default: 0
+        customerId:
+          description: "id of the customer, as in RDI data"
+          type: string
+        nRops:
+          type: integer
+          format: int32
+          description: "run this number of ROPs in sequence"
+          default: 1
+    Fdn:
+      type: object
+      required:
+        - name
+        - fdn
+      properties:
+        name:
+          type: string
+        fdn:
+          type: string
+    AllowList:
+      type: object
+      properties:
+        Enodebs:
+          $ref: "#/components/schemas/Enodebs"
+        EUtranCells:
+          $ref: "#/components/schemas/EUtranCells"
+    Enodebs:
+      type: array
+      default: [ ]
+      items:
+        $ref: "#/components/schemas/Enodeb"
+    Enodeb:
+      type: object
+      required:
+        - fdn
+      properties:
+        fdn:
+          type: string
+        nodeName:
+          description: "Enodeb that maps to the management field"
+          type: string
+        readOnly:
+          type: boolean
+    EUtranCells:
+      type: array
+      default: [ ]
+      items:
+        $ref: "#/components/schemas/EUtranCell"
+    EUtranCell:
+      type: object
+      required:
+        - fdn
+      properties:
+        fdn:
+          type: string
+        cellName:
+          description: "EUtranCell that maps to the management field"
+          type: string
+        readOnly:
+          type: boolean
+    RopData:
+      type: object
+      additionalProperties:
+        type: object
+        additionalProperties:
+            $ref: "#/components/schemas/Counter"
+    Counter:
+      type: object
+      required:
+        - pmCounter
+      properties:
+        pmCounter:
+          type: object
+          additionalProperties:
+            type: number
+            format: double
+    ReportDataRequest:
+      type: object
+      properties:
+        # TODO - need revisit the parameter list after UI part is implemented
+        nRops:
+          type: integer
+          format: int32
+          description: "get this number of Reports"
+          default: 1
+        startTimeStamp:
+          type: integer
+          format: int64
+          description: "get Reports after this time (epoc in milliseconds)"
+        endTimeStamp:
+          type: integer
+          format: int64
+          description: "get Reports before this time (epoc in milliseconds)"
+    RopReportData:
+      type: object
+      additionalProperties:
+        $ref: "#/components/schemas/ReportData"
+    ReportData:
+      type: object
+      properties:
+        allowList:
+          type: array
+          items:
+            $ref: "#/components/schemas/AllowListReportData"
+        cellData:
+          type: object
+          additionalProperties:
+            $ref: "#/components/schemas/CellReportData"
+    AllowListReportData:
+      type: object
+      properties:
+        fdn:
+          type: string
+        isBlocked:
+          type: boolean
+    CellReportData:
+      type: object
+      properties:
+        scgList:
+          type: array
+          items:
+            $ref: "#/components/schemas/ScgReportData"
+        profileData:
+          type: object
+          properties:
+            oldProfileRef:
+              type: string
+            newProfile:
+              $ref: "#/components/schemas/EndcDistrProfileReportData"
+            newProfileCreated:
+              type: boolean
+            status:
+              type: string
+              enum:
+                - unchanged
+                - pending
+                - success
+                - failed_at_creating_profile
+                - failed_at_modify_profile
+                - failed_at_modify_cell
+                - aborted_data_error
+    ScgReportData:
+      type: object
+      properties:
+        arfcn:
+          type: integer
+          format: int32
+        freqTag:
+          type: string
+        totalCapacity:
+          type: number
+          format: double
+        totalLoad:
+          type: number
+          format: double
+        sCells:
+          type: array
+          items:
+            $ref: "#/components/schemas/SCellReportData"
+    SCellReportData:
+      type: object
+      additionalProperties:
+        type: object
+        properties:
+          capacity:
+            type: number
+            format: double
+          load:
+            type: number
+            format: double
+    EndcDistrProfileReportData:
+      type: object
+      properties:
+        fdn:
+          type: string
+        endcUserThreshold:
+          type: integer
+          format: int32
+        gUtranFreqDistribution:
+          type: array
+          items:
+            type: integer
+        gUtranFreqRef:
+          type: array
+          items:
+            $ref: "#/components/schemas/GUtranSyncSignalFrequencyReportData"
+        mandatoryGUtranFreqRef:
+          type: array
+          items:
+            $ref: "#/components/schemas/GUtranSyncSignalFrequencyReportData"
+    GUtranSyncSignalFrequencyReportData:
+      type: object
+      properties:
+        fdn:
+          type: string
+          format: int32
+        arfcn:
+          type: integer
+          format: int32
+        band:
+          type: integer
+          format: int32

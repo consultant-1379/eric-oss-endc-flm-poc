@@ -1,0 +1,32 @@
+{
+  "1674818460000":
+  {
+    "SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00035,ManagedElement=LTE31dg2ERBS00035,ENodeBFunction=1,EUtranCellFDD=LTE31dg2ERBS00035-1":
+    {
+      "pmCounter": {
+        "PmEndcDistrFreqSel": 0.0
+      }
+    },
+    "SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00045,ManagedElement=LTE31dg2ERBS00045,ENodeBFunction=1,EUtranCellTDD=LTE31dg2ERBS00045-1":
+    {
+      "pmCounter": {
+        "PmEndcDistrFreqSel": 0.0
+      }
+    }
+  },
+  "1674817560000":
+  {
+    "SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00035,ManagedElement=LTE31dg2ERBS00035,ENodeBFunction=1,EUtranCellFDD=LTE31dg2ERBS00035-1":
+    {
+      "pmCounter": {
+        "PmEndcDistrFreqSel": 0.0
+      }
+    },
+    "SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00045,ManagedElement=LTE31dg2ERBS00045,ENodeBFunction=1,EUtranCellTDD=LTE31dg2ERBS00045-1":
+    {
+      "pmCounter": {
+        "PmEndcDistrFreqSel": 0.0
+      }
+    }
+  }
+}

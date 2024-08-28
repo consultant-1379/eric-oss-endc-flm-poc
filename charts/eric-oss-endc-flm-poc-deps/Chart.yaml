@@ -1,0 +1,38 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+apiVersion: v2
+name: eric-oss-endc-flm-poc-deps
+description: Dependency chart for eric-oss-endc-flm-poc
+
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates, including the app version.
+version: 0.1.0-1
+
+dependencies:
+  - name: eric-data-object-storage-mn
+    version: "2.5.0+15"
+    repository: "https://arm.sero.gic.ericsson.se/artifactory/proj-adp-eric-data-object-storage-mn-released-helm/"
+  - name: eric-data-coordinator-zk
+    version: "2.2.0-15"
+    repository: "https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-adp-gs-all-helm/"
+  - name: eric-data-message-bus-kf
+    version: "2.9.0-84"
+    repository: "https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-adp-gs-all-helm/"
+  - alias: eric-oss-dmm-kf-op-sz-kafka-bootstrap
+    name: eric-data-message-bus-kf
+    version: "2.9.0-84"
+    repository: "https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-adp-gs-all-helm/"

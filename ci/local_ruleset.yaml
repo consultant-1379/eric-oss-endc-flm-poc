@@ -1,0 +1,124 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+modelVersion: 2.0
+
+import:
+  common: ../common-properties.yaml
+  common-rules: common_ruleset2.0.yaml
+
+docker-images:
+  - adp-helm-kubectl: armdocker.rnd.ericsson.se/proj-adp-cicd-drop/bob-py3kubehelmbuilder:${env.HELM_KUBECTL_TAG}
+  - adp-maven-builder: armdocker.rnd.ericsson.se/proj-adp-cicd-drop/bob-java17mvnbuilder:${env.MVN_BUILDER_TAG}
+
+properties:
+  - image-secret: armdocker
+  - kafka-bootstrap: eric-data-message-bus-kf:9092
+  - helm-repositories: ./.bob/repositories.yaml
+
+# import environment variables (For example: Jenkins parameters)
+env:
+  - PWD
+  - HOME
+  - MVN_BUILDER_TAG (default=latest)
+
+  # Default docker image tags
+  - HELM_KUBECTL_TAG (default=latest)
+
+  # Kubernetes
+  - ENABLE_HELM_V3 (default=true)
+  - HELM_INSTALL_TIMEOUT (default=5m0s)
+  - HELM_RELEASE_DEPS (default=${common.helm-chart-name}-deps-release)
+  - HELM_RELEASE (default=${common.helm-chart-name}-release)
+  - K8S_NAMESPACE (default=${common.helm-chart-name}-${var.commithash})
+  - KUBECONFIG
+
+  - PROJ_MVN (default=/proj/mvn)
+  - SELI_ARTIFACTORY_REPO_USER
+  - SELI_ARTIFACTORY_REPO_PASS
+  - MAVEN_CLI_OPTS (default=-Duser.home=${env.HOME} -B)
+  - MAVEN_OPTS (default=-Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn)
+
+var:
+  - version
+  - rstate
+  - commithash
+  - docker-config-basepath
+  - image-full-name-internal
+
+rules:
+  # Install Helm Dependency Chart
+  helm-install-deps:
+    - rule: common-rules.helm-install-prep
+    - task: helm-dep-update
+      docker-image: adp-helm-kubectl
+      docker-flags: &docker_flags_kube_config
+        - "--env HOME=${env.HOME}"
+        - "--env K8S_NAMESPACE=${env.K8S_NAMESPACE}"
+        - "--env KUBECONFIG=${env.KUBECONFIG}"
+        - "--env ENABLE_HELM_V3"
+        - "--env HELM_VERSION=3.11.3"
+        - "--volume ${env.PWD}:${env.PWD}"
+        - "--volume ${env.HOME}:${env.HOME}"
+        - "--volume ${env.KUBECONFIG}:${env.KUBECONFIG}"
+        - "--volume ${var.docker-config-basepath}:${var.docker-config-basepath}"
+      cmd:
+        - helm repo add object-store-repo
+          https://arm.sero.gic.ericsson.se/artifactory/proj-adp-eric-data-object-storage-mn-released-helm/
+          --repository-config ${helm-repositories}
+        - helm repo add adp-repo
+          https://arm.rnd.ki.sw.ericsson.se/artifactory/proj-adp-gs-all-helm/
+          --repository-config ${helm-repositories}
+    - task: helm-dep-update
+      docker-image: adp-helm-kubectl
+      docker-flags: *docker_flags_kube_config
+      cmd: helm dep build
+        charts/${common.helm-chart-name}-deps/
+        --repository-config ${helm-repositories}
+        --skip-refresh
+    - task: helm-install-or-upgrade
+      docker-image: adp-helm-kubectl
+      docker-flags: *docker_flags_kube_config
+      cmd: helm upgrade
+        --install ${env.HELM_RELEASE_DEPS} charts/${common.helm-chart-name}-deps/
+        --namespace ${env.K8S_NAMESPACE}
+        --set global.pullSecret=${image-secret}
+        --timeout ${env.HELM_INSTALL_TIMEOUT}
+        --wait
+    - task: helm-install-or-upgrade-custom
+      docker-image: adp-helm-kubectl
+      docker-flags: *docker_flags_kube_config
+      cmd: helm upgrade
+        --install ${env.HELM_RELEASE} .bob/${common.helm-chart-name}-internal/${common.helm-chart-name}-${var.version}.tgz
+        --namespace ${env.K8S_NAMESPACE}
+        --set eric-log-shipper.logshipper.autodiscover.namespace=${env.K8S_NAMESPACE}
+        --set global.pullSecret=${image-secret}
+        --set rappsdk.kafka.bootstrapServers=${kafka-bootstrap}
+        --timeout ${env.HELM_INSTALL_TIMEOUT}
+        --wait
+
+  test:
+    - task: mvn-package
+      docker-image: adp-maven-builder
+      docker-in-docker: socket
+      docker-flags:
+        - "--env MAVEN_OPTS=${env.MAVEN_OPTS}"
+        - "--env HOME=${env.HOME}"
+        - "--volume ${env.HOME}:${env.HOME}"
+        - "--volume ${env.PROJ_MVN}:/proj/mvn"
+        - "--env SELI_ARTIFACTORY_REPO_USER=${env.SELI_ARTIFACTORY_REPO_USER}"
+        - "--env SELI_ARTIFACTORY_REPO_PASS=${env.SELI_ARTIFACTORY_REPO_PASS}"
+      cmd: mvn ${env.MAVEN_CLI_OPTS} test jacoco:prepare-agent jacoco:report

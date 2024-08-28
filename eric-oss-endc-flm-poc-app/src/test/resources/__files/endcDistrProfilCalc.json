@@ -1,0 +1,126 @@
+{
+  "eutran_cell_first": [
+    {
+      "ssbFrequency": 2239999,
+      "Cell Capacity or BW": 22.72,
+      "Weighted Average RRC Connected Users": 35.0,
+      "Proportional RRC Connected Users": 39.02,
+      "Difference of users between Weighted vs Proportional": 4.02,
+      "Load Change in %": 11.5,
+      "New distribution": 25.3,
+      "Final Output": 21
+    },
+    {
+      "ssbFrequency": 2251661,
+      "Cell Capacity or BW": 22.72,
+      "Weighted Average RRC Connected Users": 30.0,
+      "Proportional RRC Connected Users": 39.02,
+      "Difference of users between Weighted vs Proportional": 9.02,
+      "Load Change in %": 30.1,
+      "New distribution": 29.6,
+      "Final Output": 25
+    },
+    {
+      "ssbFrequency": 2083329,
+      "Cell Capacity or BW": 22.72,
+      "Weighted Average RRC Connected Users": 45.3,
+      "Proportional RRC Connected Users": 39.02,
+      "Difference of users between Weighted vs Proportional": -6.27,
+      "Load Change in %": -13.9,
+      "New distribution": 19.6,
+      "Final Output": 16
+    },
+    {
+      "ssbFrequency": 2071667,
+      "Cell Capacity or BW": 22.72,
+      "Weighted Average RRC Connected Users": 34.4,
+      "Proportional RRC Connected Users": 39.02,
+      "Difference of users between Weighted vs Proportional": 4.62,
+      "Load Change in %": 13.4,
+      "New distribution": 25.8,
+      "Final Output": 22
+    },
+    {
+      "ssbFrequency": 653952,
+      "Cell Capacity or BW": 5.7,
+      "Weighted Average RRC Connected Users": 20.0,
+      "Proportional RRC Connected Users": 9.7556818182,
+      "Difference of users between Weighted vs Proportional": -10.24,
+      "Load Change in %": -51.2,
+      "New distribution": 30.7,
+      "Final Output": 8
+    },
+    {
+      "ssbFrequency": 648672,
+      "Cell Capacity or BW": 3.4,
+      "Weighted Average RRC Connected Users": 7.0,
+      "Proportional RRC Connected Users": 5.8534090909,
+      "Difference of users between Weighted vs Proportional": -1.14,
+      "Load Change in %": -16.4,
+      "New distribution": 30.94,
+      "Final Output": 8
+    }
+  ],
+  "eutran_cell_second": [
+    {
+      "ssbFrequency": 2239999,
+      "Cell Capacity or BW": 22.72,
+      "Weighted Average RRC Connected Users": 35.0,
+      "Proportional RRC Connected Users": 39.02,
+      "Difference of users between Weighted vs Proportional": 4.02,
+      "Load Change in %": 11.5,
+      "New distribution": 25.6,
+      "Final Output": 21
+    },
+    {
+      "ssbFrequency": 2251661,
+      "Cell Capacity or BW": 22.72,
+      "Weighted Average RRC Connected Users": 30.0,
+      "Proportional RRC Connected Users": 39.02,
+      "Difference of users between Weighted vs Proportional": 9.02,
+      "Load Change in %": 30.1,
+      "New distribution": 29.9,
+      "Final Output": 29
+    },
+    {
+      "ssbFrequency": 2083329,
+      "Cell Capacity or BW": 22.72,
+      "Weighted Average RRC Connected Users": 45.3,
+      "Proportional RRC Connected Users": 39.02,
+      "Difference of users between Weighted vs Proportional": -6.28,
+      "Load Change in %": -13.9,
+      "New distribution": 19.8,
+      "Final Output": 12
+    },
+    {
+      "ssbFrequency": 2071667,
+      "Cell Capacity or BW": 22.72,
+      "Weighted Average RRC Connected Users": 34.4,
+      "Proportional RRC Connected Users": 39.02,
+      "Difference of users between Weighted vs Proportional": 4.62,
+      "Load Change in %": 13.4,
+      "New distribution": 26.1,
+      "Final Output": 22
+    },
+    {
+      "ssbFrequency": 653952,
+      "Cell Capacity or BW": 5.7,
+      "Weighted Average RRC Connected Users": 20.0,
+      "Proportional RRC Connected Users": 9.76,
+      "Difference of users between Weighted vs Proportional": -10.24,
+      "Load Change in %": -51.2,
+      "New distribution": 2.93,
+      "Final Output": 6
+    },
+    {
+      "ssbFrequency": 648672,
+      "Cell Capacity or BW": 3.4,
+      "Weighted Average RRC Connected Users": 7.0,
+      "Proportional RRC Connected Users": 5.85,
+      "Difference of users between Weighted vs Proportional": -1.14,
+      "Load Change in %": -16.4,
+      "New distribution": 2.51,
+      "Final Output": 10
+    }
+  ]
+}

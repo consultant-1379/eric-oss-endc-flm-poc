@@ -1,0 +1,77 @@
+{
+  "name": "traffic-optimizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "euisdk": {
+    "skeleton": "2.1.1",
+    "type": "project"
+  },
+  "scripts": {
+    "test": "web-test-runner --playwright --browsers firefox chromium",
+    "test:all": "web-test-runner --playwright --browsers chromium firefox webkit",
+    "test:watch": "web-test-runner --watch --playwright --browsers chromium",
+    "start": "web-dev-server",
+    "build:prod": "rollup -c --environment BUILD:production",
+    "build:dev": "rollup -c",
+    "srv": "node server",
+    "nuke": "rm -rf node_modules && rm -rf build",
+    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "format": "npm run format:eslint && npm run format:prettier",
+    "lint:eslint": "eslint --ext .js,.html . --ignore-path .eslintignore",
+    "format:eslint": "eslint --ext .js,.html . --fix --ignore-path .eslintignore",
+    "lint:prettier": "prettier \"**/*.{js,html}\" --check --ignore-path .eslintignore",
+    "format:prettier": "prettier \"**/*.{js,html}\" --write --ignore-path .eslintignore",
+    "test:automation:chrome": "playwright test --project=chromium",
+    "test:automation:firefox": "playwright test --project=firefox",
+    "test:automation:chrome:dev": "playwright test --debug --project=chromium",
+    "test:automation:firefox:dev": "playwright test --debug --project=firefox",
+    "test:automation:chrome:headed": "playwright test --headed --project=chromium",
+    "test:automation:firefox:headed": "playwright test --headed --project=firefox",
+    "test:automation:all": "playwright test",
+    "test:automation:report": "playwright show-report"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "avoid"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@eui/app": "^1.0.1",
+    "@eui/base": "^1.8.1",
+    "@eui/component": "^1.0.4",
+    "@eui/container": "^1.2.2",
+    "@eui/theme": "^1.1.8",
+    "@webcomponents/scoped-custom-element-registry": "0.0.9",
+    "es-module-shims": "1.8.2",
+    "urlpattern-polyfill": "10.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.24.3",
+    "@babel/eslint-parser": "7.24.1",
+    "@eui/rollup-config-generator": "^1.2.1",
+    "@open-wc/eslint-config": "12.0.3",
+    "@open-wc/testing": "4.0.0",
+    "@open-wc/testing-helpers": "3.0.0",
+    "@playwright/test": "1.42.1",
+    "@web/dev-server": "0.4.3",
+    "@web/dev-server-import-maps": "0.2.0",
+    "@web/dev-server-rollup": "0.6.1",
+    "@web/test-runner": "0.18.1",
+    "@web/test-runner-junit-reporter": "0.7.1",
+    "@web/test-runner-playwright": "0.11.0",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-lit-a11y": "4.1.2",
+    "express": "4.19.2",
+    "prettier": "3.2.5",
+    "rollup-plugin-string": "3.0.0",
+    "sinon": "17.0.1"
+  }
+}

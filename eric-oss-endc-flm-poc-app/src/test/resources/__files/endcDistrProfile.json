@@ -1,0 +1,113 @@
+{
+  "ericsson-enm:ManagedElement": [
+    {
+      "id": "LTE31dg2ERBS00035",
+      "ericsson-enm:ENodeBFunction": [
+        {
+          "id": "1",
+          "ericsson-enm:EndcDistrProfile": [
+            {
+              "id": "endcDistrProfileId-1",
+              "attributes": {
+                "endcDistrProfileId": "endcDistrProfileId-1",
+                "endcUserThreshold": 1,
+                "gUtranFreqDistribution": [50],
+                "gUtranFreqRef": ["SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00035,ManagedElement=LTE31dg2ERBS00035,ENodeBFunction=1,GUtraNetwork=1,GUtranSyncSignalFrequency=630000-30"],
+                "mandatoryGUtranFreqRef": ["SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00035,ManagedElement=LTE31dg2ERBS00035,ENodeBFunction=1,GUtraNetwork=1,GUtranSyncSignalFrequency=620000-20"]
+              }
+            },
+            {
+              "id": "endcDistrProfileId-2",
+              "attributes": {
+                "endcDistrProfileId": "endcDistrProfileId-2",
+                "endcUserThreshold": 1,
+                "gUtranFreqDistribution": [50],
+                "gUtranFreqRef": ["SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00035,ManagedElement=LTE31dg2ERBS00035,ENodeBFunction=1,GUtraNetwork=1,GUtranSyncSignalFrequency=620000-20"],
+                "mandatoryGUtranFreqRef": ["SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00035,ManagedElement=LTE31dg2ERBS00035,ENodeBFunction=1,GUtraNetwork=1,GUtranSyncSignalFrequency=630000-30"]
+              }
+            }
+          ],
+          "ericsson-enm:GUtraNetwork": [
+            {
+              "id": "1",
+              "attributes": {
+                "gUtraNetworkId": "1",
+                "simpleGUtranFreqSmtc": true
+              },
+              "ericsson-enm:GUtranSyncSignalFrequency": [
+                {
+                  "id": "630000-30",
+                  "attributes": {
+                    "arfcn": 63000,
+                    "band": 1,
+                    "bandList": [512],
+                    "gscn": 1,
+                    "gUtranSyncSignalFrequencyId": "630000-30",
+                    "smtcDuration": 5,
+                    "smtcOffset": 0,
+                    "smtcPeriodicity": 20,
+                    "smtcScs": 30
+                  }
+                },
+                {
+                  "id": "620000-20",
+                  "attributes": {
+                    "arfcn": 62000,
+                    "band": 1,
+                    "bandList": [512],
+                    "gscn": 1,
+                    "gUtranSyncSignalFrequencyId": "620000-20",
+                    "smtcDuration": 5,
+                    "smtcOffset": 0,
+                    "smtcPeriodicity": 20,
+                    "smtcScs": 30
+                  }
+                }
+              ]
+            }
+          ],
+          "ericsson-enm:EUtranCellFDD": [
+            {
+              "id": "LTE31dg2ERBS00035-1",
+              "attributes": {
+                "operationalState": "DISABLED",
+                "cellId": 11,
+                "eUtranCellFDDId": "LTE31dg2ERBS00035-1",
+                "earfcndl": "3",
+                "earfcnul": "18003",
+                "freqBand": "3",
+                "endcDistrProfileRef": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00035,ManagedElement=LTE31dg2ERBS00035,ENodeBFunction=1,EndcDistrProfile=endcDistrProfileId-1",
+                "endcAllowedPlmnList": [
+                  {
+                    "mncLength": "null",
+                    "mcc": "null",
+                    "mnc": "null"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "LTE31dg2ERBS00035-2",
+              "attributes": {
+                "operationalState": "DISABLED",
+                "cellId": 12,
+                "eUtranCellFDDId": "LTE31dg2ERBS00035-2",
+                "earfcndl": "3",
+                "earfcnul": "18003",
+                "freqBand": "3",
+                "endcDistrProfileRef": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00035,ManagedElement=LTE31dg2ERBS00035,ENodeBFunction=1,EndcDistrProfile=endcDistrProfileId-2",
+                "endcAllowedPlmnList": [
+                  {
+                    "mncLength": "null",
+                    "mcc": "null",
+                    "mnc": "null"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

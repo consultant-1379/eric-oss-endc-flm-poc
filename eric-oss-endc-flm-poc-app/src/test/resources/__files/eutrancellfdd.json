@@ -1,0 +1,777 @@
+{
+    "ManagedElement": [
+        {
+            "id": "LTE31dg2ERBS00035",
+            "ENodeBFunction": [
+                {
+                    "id": "1",
+                    "EUtranCellFDD": [
+                        {
+                            "id": "LTE31dg2ERBS00035-1",
+                            "attributes": {
+                                "ns05LowBandSchedMode": "ALWAYS_PROHIBIT",
+                                "ulInterferenceManagementActive": "true",
+                                "hpueCaSwitchThres": "-150",
+                                "physicalLayerCellId": "0",
+                                "ulHarqVolteBlerTarget": "5",
+                                "extGUtranCellRef": "null",
+                                "pdcchOuterLoopInitialAdj": "-70",
+                                "dummyCdmaBandClass": "UNDEFINED_VALUE",
+                                "additionalSpectrumEmissionValues": "null",
+                                "cceDynUeAdmCtrlOverloadThr": "600",
+                                "cellBarred": "NOT_BARRED",
+                                "dlDynUeAdmCtrlRetDiffThr": "500",
+                                "preambleInitialReceivedTargetPower": "-110",
+                                "enableUeAssistedSigReduction": "true",
+                                "dynUeAdmCtrlEnabled": "false",
+                                "cellSubscriptionCapacity": "1000",
+                                "plmnPabBarringPriorityLevel": "PRIORITY0",
+                                "acBarringPlmnPabEnabled": "false",
+                                "maxSoftLockBackoffTime": "90",
+                                "outOfCoverageThreshold": "20",
+                                "freqBand": "3",
+                                "plmn1AbConfProfileRef": "null",
+                                "ttiBundlingAfterHo": "NO_TTI_BUNDLING",
+                                "ailgAutoRestartEnabled": "false",
+                                "cellCapMaxCellSubCap": "1500",
+                                "loadBasedCaEnabled": "false",
+                                "eutranCellCoverage": {
+                                    "posCellBearing": "-1",
+                                    "posCellOpeningAngle": "-1",
+                                    "posCellRadius": "0"
+                                },
+                                "measGapShareSchemeCeABr": "SCHEME_ZERO",
+                                "filterUeDlThpTimeThr": "50",
+                                "servOrPrioIFHoSetupBearer": "true",
+                                "elcEnabled": "false",
+                                "rtpTimeout": "10",
+                                "uncertSemiMajor": "0",
+                                "uncertSemiMinor": "0",
+                                "ulImprovedUeSchedLastEnabled": "true",
+                                "prsPeriod": "PP160",
+                                "lbabBarringPriorityLevel": "PRIORITY0",
+                                "operationalState": "DISABLED",
+                                "servOrPrioTriggeredErabAction": "REJECT",
+                                "pdcchOuterLoopUpStep": "8",
+                                "puschMaxNrOfPrbsPerUe": "100",
+                                "maxValidSubframeDlBr": "100",
+                                "latitude": "52909891",
+                                "sCellHandlingAtVolteCall": "KEEP_SCELLS",
+                                "ssacBarringForMMTELVoice": {
+                                    "acBarringFactor": "95",
+                                    "acBarringForSpecialAC": [
+                                        "false",
+                                        "false",
+                                        "false",
+                                        "false",
+                                        "false"
+                                    ],
+                                    "acBarringTime": "64"
+                                },
+                                "eDrxAllowed": "false",
+                                "covTriggerdBlindHoAllowed": "true",
+                                "acBarringForMoData": {
+                                    "acBarringFactor": "95",
+                                    "acBarringForSpecialAC": [
+                                        "false",
+                                        "false",
+                                        "false",
+                                        "false",
+                                        "false"
+                                    ],
+                                    "acBarringTime": "64"
+                                },
+                                "prsConfigIndex": "-1",
+                                "additionalPlmnReservedList": [
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false"
+                                ],
+                                "eranUlCompUserSelSinrThr": "150",
+                                "cceDynUeAdmCtrlRetDiffThr": "500",
+                                "csiRsConfigType8TxFDD": "NZP_CSIRS",
+                                "otdoaCheckEnabled": "false",
+                                "pdcchTargetBlerPCell": "22",
+                                "modificationPeriodCoeff": "2",
+                                "ttiBundlingAtSetup": "OFF",
+                                "beamWeightSet16TrTm9": "0",
+                                "physicalLayerCellIdGroup": "144",
+                                "ulChannelBandwidth": "10000",
+                                "additionalMultipleNSPmax": [
+                                    {
+                                        "multipleNSvalue": "null",
+                                        "multiplePmax": "null"
+                                    }
+                                ],
+                                "ptmCellProfileRef": "null",
+                                "deallocThrPucchFormat1": "100",
+                                "timeOfLastModification": "",
+                                "highestSupportedCeLevelBr": "0",
+                                "maxSentCrsAssistCells": "8",
+                                "uncertAltitude": "0",
+                                "ulBlerTargetEnabled": "false",
+                                "reservedBy": "null",
+                                "tUeBlockingTimer": "200",
+                                "mbsfnSubframesForTm9": "DISABLED",
+                                "qciTableRef": "null",
+                                "prsMutingPattern": "1",
+                                "sectorCarrierRef": ["SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00035,ManagedElement=LTE31dg2ERBS00035,ENodeBFunction=1,SectorCarrier=6-1"],
+                                "qRxLevMinOffset": "1000",
+                                "zzzTemporary33": "-2000000000",
+                                "zzzTemporary32": "-2000000000",
+                                "zzzTemporary31": "-2000000000",
+                                "rateShapingActive": "false",
+                                "zzzTemporary30": "-2000000000",
+                                "channelSelectionSetSize": "2",
+                                "loadBasedCaMsrThr": {
+                                    "dlPrbUtilThreshHigh": "55",
+                                    "ulPrbUtilThreshHigh": "55",
+                                    "ulSeUtilThreshLow": "40",
+                                    "cceUtilThreshLow": "40",
+                                    "cceUtilThreshHigh": "55",
+                                    "dlSeUtilThreshLow": "40",
+                                    "ulPrbUtilThreshLow": "40",
+                                    "dlPrbUtilThreshLow": "40",
+                                    "dlSeUtilThreshHigh": "55",
+                                    "ulSeUtilThreshHigh": "55"
+                                },
+                                "activePlmnList": [
+                                    {
+                                        "mncLength": "2",
+                                        "mcc": "353",
+                                        "mnc": "57"
+                                    }
+                                ],
+                                "filterUeDlThpVolThr": "100",
+                                "pdcchTargetBlerVolte": "22",
+                                "cellRange": "15",
+                                "siPeriodicity": {
+                                    "siPeriodicitySI1": "8",
+                                    "siPeriodicitySI2": "64",
+                                    "siPeriodicitySI9": "64",
+                                    "siPeriodicitySI10": "64",
+                                    "siPeriodicitySI7": "64",
+                                    "siPeriodicitySI8": "64",
+                                    "siPeriodicitySI5": "64",
+                                    "siPeriodicitySI6": "64",
+                                    "siPeriodicitySI3": "64",
+                                    "siPeriodicitySI4": "64"
+                                },
+                                "pciConflictCell": [
+                                    {
+                                        "mncLength": "null",
+                                        "mnc": "null",
+                                        "cellId": "null",
+                                        "mcc": "null",
+                                        "enbId": "null"
+                                    }
+                                ],
+                                "ailgActive": "true",
+                                "mappingInfoCe": {
+                                    "mappingInfoSIB15": "NOT_MAPPED",
+                                    "mappingInfoSIB8": "NOT_MAPPED",
+                                    "mappingInfoSIB16": "NOT_MAPPED",
+                                    "mappingInfoSIB13": "NOT_MAPPED",
+                                    "mappingInfoSIB11": "NOT_MAPPED",
+                                    "mappingInfoSIB12": "NOT_MAPPED",
+                                    "mappingInfoSIB10": "NOT_MAPPED",
+                                    "mappingInfoSIB3": "NOT_MAPPED",
+                                    "mappingInfoSIB6": "NOT_MAPPED",
+                                    "mappingInfoSIB7": "NOT_MAPPED",
+                                    "mappingInfoSIB4": "NOT_MAPPED",
+                                    "mappingInfoSIB5": "NOT_MAPPED"
+                                },
+                                "dlPowerRatio": "100",
+                                "ulInternalChannelBandwidth": "0",
+                                "administrativeState": "UNLOCKED",
+                                "lbabThreshTimeHigh": "30",
+                                "dynLoadCtrlMinNewConn": "1",
+                                "advCellSupAction": "NO_ACTION",
+                                "hoOptAdjThresholdPercQci1": "50",
+                                "noOfCrsPorts": "0",
+                                "siValidityTimeBr": "VALIDITY_TIME_3H",
+                                "siWindowLength": "10",
+                                "ulSrsEnable": "false",
+                                "ulDynUeAdmCtrlRetDiffThr": "500",
+                                "additionalPlmnList": [
+                                    {
+                                        "mncLength": "2",
+                                        "mcc": "0",
+                                        "mnc": "0"
+                                    }
+                                ],
+                                "lbUtranOffloadThreshold": "100",
+                                "pdschTypeBGain": "0",
+                                "deallocTimerPucchFormat1": "6000",
+                                "zzzTemporary43": "-2000000000",
+                                "zzzTemporary42": "-2000000000",
+                                "ulSCellPriority": "5",
+                                "zzzTemporary41": "-2000000000",
+                                "cellId": "1",
+                                "enableSinrUplinkClpc": "false",
+                                "srProcessingLevel": "NO_ADDITIONAL_SR_NEEDED",
+                                "acBarringInfoPresent": "false",
+                                "tm9Tm4ModeSwitchingEnabled": "false",
+                                "lbabThreshRejectRateHigh": "200",
+                                "hpueCaSwitchHyst": "20",
+                                "interferenceThresholdSinrClpc": "-105",
+                                "beamWeightSet16Tr": "0",
+                                "primaryPlmnAlarmSuppr": "false",
+                                "rwrSearchZoneAllowed": "true",
+                                "liteMcsReduction": "ON",
+                                "qQualMin": "0",
+                                "gpsTimeSFN0Seconds": "0",
+                                "userLabel": "LTE31dg2ERBS00035-1",
+                                "expectedMaxNoOfUsersInCell": "-1",
+                                "zzzTemporary17": "-2000000000",
+                                "zzzTemporary14": "-2000000000",
+                                "dlConfigurableFrequencyStart": "0",
+                                "primaryPlmnReserved": "false",
+                                "pucchOverdimensioning": "0",
+                                "cioLowerLimitAdjBySon": "-3",
+                                "puschPwrOffset64qam": "0",
+                                "noOfPucchCqiUsers": "160",
+                                "hoOptStatTime": "24",
+                                "drxActive": "false",
+                                "pdcchOuterLoopInitialAdjPCell": "-70",
+                                "cfraEnable": "false",
+                                "dynUeAdmCtrlFilterConst": "3000",
+                                "lbEUtranCellOffloadCapacity": "1000",
+                                "enableServiceSpecificHARQ": "false",
+                                "acBarringSkipForMmtelVideo": "false",
+                                "alpha": "10",
+                                "interEnbUlCompUserSelSinrHys": "10",
+                                "srDetectHighThres": "70",
+                                "catmMbmsDlSubframes": "0",
+                                "dlPowerChangeRate": "1",
+                                "availabilityStatus": "null",
+                                "gpsTimeSFN0DecimalSecond": "0",
+                                "validDlBrSubframes": "null",
+                                "hoOptStatNum": "200",
+                                "spifhoSetupBearerAtInitialCtxtSetup": "false",
+                                "tReorderingAutoConfiguration": "false",
+                                "zzzTemporary29": "-2000000000",
+                                "bcCdma2000SysTimeType": "NONE",
+                                "ns05FullBandSchedEnabled": "false",
+                                "pdcchOuterLoopUpStepPCell": "6",
+                                "zzzTemporary24": "-2000000000",
+                                "zzzTemporary23": "-2000000000",
+                                "primaryPsdOffset": "0",
+                                "zzzTemporary22": "-2000000000",
+                                "zzzTemporary21": "-2000000000",
+                                "prsPowerBoosting": "0",
+                                "ulPsdLoadThresholdSinrClpc": "2",
+                                "noOfEnhAdptReTxCand": "0",
+                                "prsMutingPatternLen": "1",
+                                "enableUeAssistedAdaptiveDrx": "true",
+                                "isDlOnly": "false",
+                                "tTimeAlignmentTimer": "0",
+                                "dlInterferenceManagementActive": "false",
+                                "prsTransmisScheme": "ANTENNA_SWITCHING",
+                                "ssacBarringForMMTELVideo": {
+                                    "acBarringFactor": "95",
+                                    "acBarringForSpecialAC": [
+                                        "false",
+                                        "false",
+                                        "false",
+                                        "false",
+                                        "false"
+                                    ],
+                                    "acBarringTime": "64"
+                                },
+                                "acBarringForEmergency": "false",
+                                "lbabMinBarringFactor": "0",
+                                "prioAdditionalFreqBandList": "null",
+                                "emergencyAreaId": [
+                                    "-1",
+                                    "-1",
+                                    "-1",
+                                    "-1",
+                                    "-1",
+                                    "-1",
+                                    "-1",
+                                    "-1",
+                                    "-1",
+                                    "-1",
+                                    "-1",
+                                    "-1",
+                                    "-1",
+                                    "-1",
+                                    "-1"
+                                ],
+                                "dlDynUeAdmCtrlOverloadThr": "600",
+                                "nrOfPreallocatedSrRes": "0",
+                                "rxSinrTargetClpc": "25",
+                                "ttiBundlingSwitchThresHyst": "10",
+                                "threshServingLow": "0",
+                                "dynUlResourceAllocEnabled": "false",
+                                "mappingInfo": {
+                                    "mappingInfoSIB15": "NOT_MAPPED",
+                                    "mappingInfoSIB8": "NOT_MAPPED",
+                                    "mappingInfoSIB16": "NOT_MAPPED",
+                                    "mappingInfoSIB13": "NOT_MAPPED",
+                                    "mappingInfoSIB11": "NOT_MAPPED",
+                                    "mappingInfoSIB12": "NOT_MAPPED",
+                                    "mappingInfoSIB10": "MAPPED_SI_1",
+                                    "mappingInfoSIB3": "MAPPED_SI_1",
+                                    "mappingInfoSIB6": "NOT_MAPPED",
+                                    "mappingInfoSIB7": "NOT_MAPPED",
+                                    "mappingInfoSIB4": "NOT_MAPPED",
+                                    "mappingInfoSIB5": "NOT_MAPPED"
+                                },
+                                "pciConflict": "null",
+                                "zzzTemporary79": "-2000000000",
+                                "zzzTemporary78": "-2000000000",
+                                "zzzTemporary77": "",
+                                "zzzTemporary76": "",
+                                "networkSignallingValueCa": "CA_NS_31",
+                                "zzzTemporary75": "",
+                                "ns05FullBandUsersInCellThres": "10",
+                                "zzzTemporary74": "-2000000000",
+                                "zzzTemporary73": "-2000000000",
+                                "ttiBundlingAfterReest": "TTI_BUNDLING_SOURCE_REEST_ONLY",
+                                "zzzTemporary72": "-2000000000",
+                                "zzzTemporary71": "-2000000000",
+                                "caPrioThreshold": "300",
+                                "noOfUlImprovedUe": "1",
+                                "zzzTemporary70": "-2000000000",
+                                "lbabMinBarringFactorPrio3": "0",
+                                "lbabMinBarringFactorPrio4": "0",
+                                "cellDownlinkCaCapacity": "0",
+                                "harqOffsetDl": "3",
+                                "advCellSupSensitivity": "0",
+                                "initialBufferSizeDefault": "86",
+                                "lbabMinBarringFactorPrio1": "0",
+                                "puschNcpChannelEstWindowSize": "NORMAL_SIZE",
+                                "lbabMinBarringFactorPrio2": "0",
+                                "noOfPucchFormat3PrbPairs": "1",
+                                "allocThrPucchFormat1": "50",
+                                "primaryUpperLayerInd": "OFF",
+                                "puschFrequencyAllocationBr": "0",
+                                "acBarringForMoSignalling": {
+                                    "acBarringFactor": "95",
+                                    "acBarringForSpecialAC": [
+                                        "false",
+                                        "false",
+                                        "false",
+                                        "false",
+                                        "false"
+                                    ],
+                                    "acBarringTime": "64"
+                                },
+                                "cellCapMinMaxWriProt": "false",
+                                "msg3FrequencyAllocationBr": "1",
+                                "lbTpRankThreshMin": "-20",
+                                "physicalLayerSubCellId": "1",
+                                "lbabIncr": "5",
+                                "harqOffsetUl": "3",
+                                "acBarringPresence": {
+                                    "acBarringPrioMoSignalingSpecAc": [
+                                        "PRIORITY0",
+                                        "PRIORITY0",
+                                        "PRIORITY0",
+                                        "PRIORITY0",
+                                        "PRIORITY0"
+                                    ],
+                                    "acBarringPriorityCsfb": "PRIORITY0",
+                                    "acBarringPrioMoDataSpecAc": [
+                                        "PRIORITY0",
+                                        "PRIORITY0",
+                                        "PRIORITY0",
+                                        "PRIORITY0",
+                                        "PRIORITY0"
+                                    ],
+                                    "acBarringPrioEmergencySpecAc": "PRIORITY0",
+                                    "acBarringPrioCsfbSpecAc": [
+                                        "PRIORITY0",
+                                        "PRIORITY0",
+                                        "PRIORITY0",
+                                        "PRIORITY0",
+                                        "PRIORITY0"
+                                    ],
+                                    "acBarringForEmergencySpecAcPres": "MANUAL",
+                                    "acBarringPriorityMmtelVideo": "PRIORITY0",
+                                    "acBarringForMmtelVideoPresence": "OFF",
+                                    "acBarringForMoDataPresence": "OFF",
+                                    "acBarringForCsfbPresence": "OFF",
+                                    "acBarringPrioMmtelVoiceSpecAc": [
+                                        "PRIORITY0",
+                                        "PRIORITY0",
+                                        "PRIORITY0",
+                                        "PRIORITY0",
+                                        "PRIORITY0"
+                                    ],
+                                    "acBarringForMoSignPresence": "OFF",
+                                    "acBarringPriorityMoSignaling": "PRIORITY0",
+                                    "acBarringPriorityMoData": "PRIORITY0",
+                                    "acBarringPrioMmtelVideoSpecAc": [
+                                        "PRIORITY0",
+                                        "PRIORITY0",
+                                        "PRIORITY0",
+                                        "PRIORITY0",
+                                        "PRIORITY0"
+                                    ],
+                                    "acBarringForMmtelVoicePresence": "OFF",
+                                    "acBarringPriorityMmtelVoice": "PRIORITY0"
+                                },
+                                "zzzTemporary84": "-2000000000",
+                                "sdmActive": "false",
+                                "zzzTemporary83": "-2000000000",
+                                "ttiBundlingSwitchThres": "90",
+                                "zzzTemporary82": "-2000000000",
+                                "pdschMaxNrOfPrbsPerUe": "100",
+                                "zzzTemporary81": "-2000000000",
+                                "zzzTemporary80": "-2000000000",
+                                "arpPriorityLevelForSPIFHo": [
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false"
+                                ],
+                                "lbabThreshTimeLow": "30",
+                                "prioHpueCapability": "NO_PRIORITIZATION",
+                                "lbEUtranTriggerOffloadThreshold": "100",
+                                "allocTimerPucchFormat1": "50",
+                                "diffAdmCtrlFilteringProfRef": "null",
+                                "pdcchCovImproveDtx": "false",
+                                "cioUpperLimitAdjBySon": "4",
+                                "pdcchCovImproveSrb": "false",
+                                "additionalUpperLayerIndList": [
+                                    "OFF",
+                                    "OFF",
+                                    "OFF",
+                                    "OFF",
+                                    "OFF"
+                                ],
+                                "activeServiceAreaId": "null",
+                                "estCellCapUsableFraction": "100",
+                                "zzzTemporary59": "-2000000000",
+                                "hoOptAdjThresholdAbs": "5",
+                                "zzzTemporary57": "-2000000000",
+                                "cellCapMinCellSubCap": "500",
+                                "additionalPlmnAlarmSupprList": [
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false",
+                                    "false"
+                                ],
+                                "lbabDecr": "5",
+                                "zzzTemporary50": "-2000000000",
+                                "pdcchLaGinrMargin": "100",
+                                "plmn2AbConfProfileRef": "null",
+                                "outOfCoverageSrTimerPeriodicity": "320",
+                                "multipleNSPmaxReqMapping": [
+                                    {
+                                        "additionalFreqBand": "null",
+                                        "additionalPMax": "null",
+                                        "additionalNSvalue": "null"
+                                    }
+                                ],
+                                "lbabPeriod": "120",
+                                "dlBlerTargetEnabled": "false",
+                                "mfbiFreqBandIndPrio": "false",
+                                "upperLayerIndR15Usage": "false",
+                                "pdcchCfiMode": "CFI_STATIC_BY_BW",
+                                "otdoaSuplActive": "false",
+                                "hoOptAdjThresholdAbsQci1": "5",
+                                "adaptiveCfiHoProhibit": "NO_HO_PROHIBIT_CFI",
+                                "lbabThreshRejectRateLow": "20",
+                                "lbEUtranAcceptOffloadThreshold": "50",
+                                "spectrumEmissionReqMapping": [
+                                    {
+                                        "spectrumEmissionReq": "null",
+                                        "freqBand": "null"
+                                    }
+                                ],
+                                "earfcndl": "3",
+                                "dlPowerState": "INVALID",
+                                "zzzTemporary69": "-2000000000",
+                                "commonSrPeriodicity": "10",
+                                "zzzTemporary68": "-2000000000",
+                                "orientMajorAxis": "0",
+                                "ulDynUeAdmCtrlOverloadThr": "600",
+                                "zzzTemporary67": "-2000000000",
+                                "csiRsConfigType": "NZP_CSIRS",
+                                "eUtranCellFDDId": "LTE31dg2ERBS00035-1",
+                                "zzzTemporary66": "-2000000000",
+                                "zzzTemporary65": "-2000000000",
+                                "zzzTemporary64": "-2000000000",
+                                "ul64qamEnabled": "true",
+                                "zzzTemporary63": "-2000000000",
+                                "lessPrbUsageThreshold": "90",
+                                "zzzTemporary62": "-2000000000",
+                                "zzzTemporary61": "-2000000000",
+                                "endcAllowedPlmnList": [
+                                    {
+                                        "mncLength": "2",
+                                        "mcc": "353",
+                                        "mnc": "56"
+                                    },
+                                    {
+                                        "mncLength": "2",
+                                        "mcc": "353",
+                                        "mnc": "58"
+                                    }
+                                ],
+                                "includeLcgInMacUeThp": [
+                                    "false",
+                                    "false",
+                                    "true",
+                                    "true"
+                                ],
+                                "zzzTemporary60": "-2000000000",
+                                "eranUlCompUserSelSinrHys": "10",
+                                "schedulingInfoSib1BrMod": "OFF",
+                                "hostingDigitalUnit": "null",
+                                "initCdma2000SysTimeType": "NONE",
+                                "measCellGroupCellRef": "null",
+                                "earfcnul": "18003",
+                                "servOrPrioRedirectEnabled": "true",
+                                "dl256QamEnabled": "true",
+                                "ailgRef": "null",
+                                "elcLongDrxCycle": "SF40",
+                                "resourcePartitionGroupRef": "null",
+                                "crsGain": "0",
+                                "measBasedElcControl": "false",
+                                "prachFrequencyAllocation": "0",
+                                "dlChannelBandwidth": "15000",
+                                "pZeroNominalPusch": "-103",
+                                "acBarringSkipForSms": "false",
+                                "eutranCellPolygon": [
+                                    {
+                                        "cornerLongitude": "null",
+                                        "cornerLatitude": "null"
+                                    }
+                                ],
+                                "covTriggerdBlindHoAllowedBr": "true",
+                                "latencyLongThreshold": "135",
+                                "hpueCaSwitchTimeToTrigger": "40",
+                                "idleModePrioAtReleaseRef": "null",
+                                "changeNotification": {
+                                    "changeNotificationSIB13": "true",
+                                    "changeNotificationSIB16": "true",
+                                    "changeNotificationSIB15": "true",
+                                    "changeNotificationSIB3": "true",
+                                    "changeNotificationSIB4": "true",
+                                    "changeNotificationSIB1": "true",
+                                    "changeNotificationSIB2": "true",
+                                    "changeNotificationSIB7": "true",
+                                    "changeNotificationSIB8": "true",
+                                    "changeNotificationSIB5": "true",
+                                    "changeNotificationSIB6": "true"
+                                },
+                                "ns05PathlossOffsetThres": "50",
+                                "tac": "1",
+                                "minBestCellHoAttempts": "1",
+                                "noConsecutiveSubframes": "SF1",
+                                "clusteredPuschMprFactor": "100",
+                                "hoOptStatNumQci1": "200",
+                                "longitude": "-4357467",
+                                "pdcchOuterLoopUpStepVolte": "6",
+                                "srvccDelayTimer": "0",
+                                "lbTpNonQualFraction": "35",
+                                "pciDetectingCell": [
+                                    {
+                                        "mncLength": "null",
+                                        "mnc": "null",
+                                        "cellId": "null",
+                                        "mcc": "null",
+                                        "enbId": "null"
+                                    }
+                                ],
+                                "frameStartOffset": {
+                                    "subFrameOffset": "0"
+                                },
+                                "pdcchPowerBoostMax": "0",
+                                "siPeriodicityBr": {
+                                    "siPeriodicitySI1": "8",
+                                    "siPeriodicitySI2": "64",
+                                    "siPeriodicitySI9": "64",
+                                    "siPeriodicitySI10": "64",
+                                    "siPeriodicitySI7": "64",
+                                    "siPeriodicitySI8": "64",
+                                    "siPeriodicitySI5": "64",
+                                    "siPeriodicitySI6": "64",
+                                    "siPeriodicitySI3": "64",
+                                    "siPeriodicitySI4": "64"
+                                },
+                                "prsConfigIndexMapped": "0",
+                                "qQualMinOffset": "0",
+                                "servOrPrioTriggeredIFHo": "QCI",
+                                "highBasebandPriority": "false",
+                                "networkSignallingValue": "NS_01",
+                                "qQualMinRsrqCe": "0",
+                                "additionalFreqBandList": "null",
+                                "lastSchedLinkAdaptEnabled": "true",
+                                "ulConfigurableFrequencyStart": "0",
+                                "ulFrequencyAllocationProportion": "100",
+                                "highSpeedUEActive": "false",
+                                "catm1SupportEnabled": "false",
+                                "altitude": "392",
+                                "measCellGroupUeRef": "null",
+                                "prescheduling": "true",
+                                "systemInformationBlock7": {
+                                    "tReselectionGeranSfMedium": "100",
+                                    "tReselectionGeranSfHigh": "100",
+                                    "tReselectionGeran": "2"
+                                },
+                                "systemInformationBlock6": {
+                                    "tReselectionUtra": "2",
+                                    "tReselectionUtraSfHigh": "100",
+                                    "tReselectionUtraSfMedium": "100"
+                                },
+                                "enableDrxAwareRlcArq": "false",
+                                "pdcchCovImproveQci1": "false",
+                                "systemInformationBlock3": {
+                                    "threshServingLowQ": "1000",
+                                    "sIntraSearch": "1000",
+                                    "sNonIntraSearchP": "0",
+                                    "sNonIntraSearchQ": "0",
+                                    "tHystNormal": "240",
+                                    "sNonIntraSearchv920Active": "false",
+                                    "qHystSfMedium": "0",
+                                    "nCellChangeHigh": "16",
+                                    "tEvaluation": "240",
+                                    "nCellChangeMedium": "16",
+                                    "qHystSfHigh": "0",
+                                    "sIntraSearchv920Active": "false",
+                                    "sIntraSearchQ": "0",
+                                    "qHyst": "4",
+                                    "sIntraSearchP": "62",
+                                    "sNonIntraSearch": "0"
+                                },
+                                "transmissionMode": "TRANSMISSION_MODE_3",
+                                "dlPowerRampUpInitRatio": "100",
+                                "systemInformationBlock8": {
+                                    "tReselectionCdma1xRttSfMedium": "100",
+                                    "tReselectionCdma1xRtt": "2",
+                                    "tReselectionCdmaHrpdSfMedium": "100",
+                                    "tReselectionCdmaHrpdSfHigh": "100",
+                                    "tReselectionCdmaHrpd": "2",
+                                    "tReselectionCdma1xRttSfHigh": "100",
+                                    "searchWindowSizeCdma": "8"
+                                },
+                                "noOfChannelSelectionSets": "4",
+                                "mobCtrlAtPoorCovActive": "false",
+                                "interEnbUlCompUserSelSinrThr": "100",
+                                "ulTxPsdDistrThr": "40",
+                                "ulSchedCtrlForOocUesEnabled": "true",
+                                "dlInternalChannelBandwidth": "0",
+                                "qRxLevMin": "-140",
+                                "acBarringForCsfb": {
+                                    "acBarringFactor": "95",
+                                    "acBarringForSpecialAC": [
+                                        "false",
+                                        "false",
+                                        "false",
+                                        "false",
+                                        "false"
+                                    ],
+                                    "acBarringTime": "64"
+                                },
+                                "acBarringSkipForMmtelVoice": "false",
+                                "confidence": "100",
+                                "loadBasedBarringFactor": "0",
+                                "maxNoClusteredPuschAlloc": "0",
+                                "qRxLevMinCe": "-140",
+                                "ulTrigActive": "true",
+                                "hoOptAdjThresholdPerc": "50",
+                                "dlPowerRampUpRate": "1",
+                                "pdcchOuterLoopInitialAdjVolte": "-70",
+                                "pMaxServingCell": "1000",
+                                "bsrThreshold": "0",
+                                "pdcchTargetBler": "24",
+                                "plmn3AbConfProfileRef": "null",
+                                "noOfPucchSrUsers": "160",
+                                "lastModification": "OPERATOR",
+                                "pZeroNominalPucch": "-117",
+                                "rachRootSequence": "386",
+                                "dlFrequencyAllocationProportion": "100"
+                            },
+                            "GUtranFreqRelation": [
+                                {
+                                    "id": "4",
+                                    "attributes": {
+                                        "endcB1MeasPriority": "5",
+                                        "cellReselectionPriority": "7",
+                                        "connectedModeMobilityPrio": "-1"
+                                    },
+                                    "GUtranCellRelation": [
+                                        {
+                                            "id": "8",
+                                            "attributes": {
+                                                "isHoAllowed": true,
+                                                "isRemovedAllowed": true,
+                                                "neighborCellRef": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00035,ManagedElement=LTE31dg2ERBS00035,ENodeBFunction=1,ExternalGNodeBFunction=1,ExternalGUtranCell=NR03gNodeBRadio00002-1",
+                                                "essEnabled": false,
+                                                "isEndcAllowed": true,
+                                                "essCellScPairs": "null"
+                                            }
+                                        },
+                                        {
+                                            "id": "18",
+                                            "attributes": {
+                                                "isHoAllowed": true,
+                                                "isRemovedAllowed": true,
+                                                "neighborCellRef": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00035,ManagedElement=LTE31dg2ERBS00035,ENodeBFunction=1,ExternalGNodeBFunction=1,ExternalGUtranCell=NR03gNodeBRadio00003-1",
+                                                "essEnabled": false,
+                                                "isEndcAllowed": true,
+                                                "essCellScPairs": "null"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "10",
+                                    "attributes": {
+                                        "endcB1MeasPriority": "6",
+                                        "cellReselectionPriority": "8",
+                                        "connectedModeMobilityPrio": "-1"
+                                    },
+                                    "GUtranCellRelation": [
+                                        {
+                                            "id": "2",
+                                            "attributes": {
+                                                "isHoAllowed": true,
+                                                "isRemovedAllowed": true,
+                                                "neighborCellRef": "SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00035,ManagedElement=LTE31dg2ERBS00035,ENodeBFunction=1,ExternalGNodeBFunction=1,ExternalGUtranCell=NR03gNodeBRadio00010-1",
+                                                "essEnabled": false,
+                                                "isEndcAllowed": true,
+                                                "essCellScPairs": "null"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "SectorCarrier": [
+                        {
+                            "id": "6-1",
+                            "attributes": {
+                                "reservedBy": ["SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00035,ManagedElement=LTE31dg2ERBS00035,vsDataENodeBFunction=1,vsDataEUtranCellFDD=1-1"],
+                                "essScLocalId": 0,
+                                "essScPairId": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

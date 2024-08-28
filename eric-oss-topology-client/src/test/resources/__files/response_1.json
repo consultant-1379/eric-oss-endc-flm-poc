@@ -1,0 +1,24 @@
+[
+  {
+    "type": "ctw/enodeb",
+    "id": 84,
+    "href": "ctw/enodeb/84",
+    "externalId": "1A3FEC357772E53591E58579E2FB72DE/ericsson-enm-ComTop:ManagedElement=LTE74dg2ERBST00064/ericsson-enm-Lrat:ENodeBFunction=1",
+    "name": "Europe/Ireland/NETSimW/LTE74dg2ERBST00064/1",
+    "revisionNumber": 1,
+    "createdOn": "2024-02-16T15:48:29.247Z",
+    "createdBy": "sysadm",
+    "status": "operating",
+    "lastModifiedOn": "2024-02-16T15:48:29.247Z",
+    "lastModifiedBy": "sysadm",
+    "revisionGroupKey": {
+      "type": "revisionGroupKey",
+      "keyValue": 84
+    },
+    "versionNumber": 1,
+    "key": {
+      "type": "ctw/enodebKey",
+      "keyValue": 84
+    }
+  }
+]

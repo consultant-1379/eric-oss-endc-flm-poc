@@ -1,0 +1,33 @@
+{
+  "version": 0.1,
+  "subscriptions": [
+    {
+      "name": "5g-pm-counters",
+      "isMandatory": "yes",
+      "isOnHold": "no",
+      "consumer": "ENDC-FLM",
+      "dataType": {
+        "dataspace": "5G",
+        "dataCategory": "PM_COUNTERS",
+        "dataProvider": "RAN"
+      },
+      "predicates": {
+        "nodeName": [ ]
+      }
+    },
+    {
+      "name": "4g-pm-counters",
+      "isMandatory": "yes",
+      "isOnHold": "no",
+      "consumer": "ENDC-FLM",
+      "dataType": {
+        "dataspace": "4G",
+        "dataCategory": "PM_COUNTERS",
+        "dataProvider": "RAN"
+      },
+      "predicates": {
+        "nodeName": [ ]
+      }
+    }
+  ]
+}

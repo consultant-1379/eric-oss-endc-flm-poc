@@ -1,0 +1,38 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:endcflm
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.H2Dialect
+      format_sql: true
+  security.oauth2.client:
+    registration.eic:
+      client-id: kafka
+
+rapp-sdk:
+  kafka:
+    enabled: false
+  dcc:
+    enabled: true
+    test-enabled: true
+  cellCapacityCalcType:
+    usingCellWeight: true

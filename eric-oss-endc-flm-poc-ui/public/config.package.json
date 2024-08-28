@@ -1,0 +1,16 @@
+{
+  "modules": [
+    {
+      "name": "settings-panel",
+      "version": "1.0.0",
+      "path": "/src/panels",
+      "main": "settings-panel.js"
+    },
+    {
+      "name": "traffic-optimizer",
+      "version": "1.0.0",
+      "path": "/src/apps/traffic-optimizer",
+      "main": "traffic-optimizer.js"
+    }
+  ]
+}

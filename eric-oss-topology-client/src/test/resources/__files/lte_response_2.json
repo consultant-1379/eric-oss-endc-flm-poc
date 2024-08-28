@@ -1,0 +1,28 @@
+[
+  {
+    "type": "ctw/ltecell",
+    "id": 10,
+    "href": "ctw/ltecell/10",
+    "externalId": "3DE8560D5707F06242DCEF17F527838D/ericsson-enm-ComTop:ManagedElement=LTE63dg2ERBST00065/ericsson-enm-Lrat:ENodeBFunction=1/ericsson-enm-Lrat:EUtranCellFDD=LTE63dg2ERBST00065-1",
+    "name": "Europe/Ireland/NETSimW/LTE63dg2ERBST00065/1/LTE63dg2ERBST00065-1",
+    "createdOn": "2024-04-18T02:09:24.572Z",
+    "createdBy": "sysadm",
+    "status": "operating",
+    "lastModifiedOn": "2024-04-18T02:09:24.572Z",
+    "lastModifiedBy": "sysadm",
+    "versionNumber": 1,
+    "revisionNumber": 1,
+    "revisionGroupKey": {
+      "type": "revisionGroupKey",
+      "keyValue": 10
+    },
+    "_type": "FDD",
+    "cellLocalId": 1,
+    "FDDearfcnDl": 1,
+    "FDDearfcnUl": 18001,
+    "key": {
+      "type": "ctw/ltecellKey",
+      "keyValue": 10
+    }
+  }
+]

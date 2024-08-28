@@ -1,0 +1,112 @@
+{
+  "1674818460000":
+  {
+    "SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00035,ManagedElement=LTE31dg2ERBS00035,ENodeBFunction=1,EUtranCellFDD=LTE31dg2ERBS00035-1":
+    {
+      "pmCounter": {
+        "PmEbsEndcSetupDrbAtt": 0.0,
+        "PmEndcSetupScgUeAtt": 0.0,
+        "PmRrcConnLevelSumNrDc": 0.0,
+        "PmEbsEndcSetupScgUeSucc": 0.0,
+        "PmEbsRrcConnLevelSamp": 0.0,
+        "PmEbsEndcSetupScgUeAtt": 0.0,
+        "PmEndcSetupUeAtt": 0.0,
+        "PmEbsEndcSetupScgDrbAtt": 0.0,
+        "PmEndcSetupUeSucc": 0.0,
+        "PmEbsEndcSetupScgDrbSucc": 0.0,
+        "PmRrcConnLevelMaxEnDc": 0.0,
+        "PmRrcConnLevelSumSa": 0.0,
+        "PmRrcConnLevelSumEnDc": 0.0,
+        "PmEndcSgnbAdditionRequest": 0.0,
+        "PmEbsEndcSetupDrbSucc": 0.0,
+        "PmEndcSetupScgUeSucc": 0.0,
+        "PmRrcConnLevelMaxSa": 0.0,
+        "PmRrcConnLevelSamp": 0.0,
+        "PmRrcConnLevelMaxNrDc": 0.0,
+        "PmEbsEndcSetupUeAtt": 0.0,
+        "PmEbsEndcSetupUeSucc": 0.0,
+        "PmEbsRrcConnLevelSumEnDc": 0.0
+      }    },
+    "SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00045,ManagedElement=LTE31dg2ERBS00045,ENodeBFunction=1,EUtranCellTDD=LTE31dg2ERBS00045-1":
+    {
+      "pmCounter": {
+        "PmEbsEndcSetupDrbAtt": 0.0,
+        "PmEndcSetupScgUeAtt": 0.0,
+        "PmRrcConnLevelSumNrDc": 0.0,
+        "PmEbsEndcSetupScgUeSucc": 0.0,
+        "PmEbsRrcConnLevelSamp": 0.0,
+        "PmEbsEndcSetupScgUeAtt": 0.0,
+        "PmEndcSetupUeAtt": 0.0,
+        "PmEbsEndcSetupScgDrbAtt": 0.0,
+        "PmEndcSetupUeSucc": 0.0,
+        "PmEbsEndcSetupScgDrbSucc": 0.0,
+        "PmRrcConnLevelMaxEnDc": 0.0,
+        "PmRrcConnLevelSumSa": 0.0,
+        "PmRrcConnLevelSumEnDc": 0.0,
+        "PmEndcSgnbAdditionRequest": 0.0,
+        "PmEbsEndcSetupDrbSucc": 0.0,
+        "PmEndcSetupScgUeSucc": 0.0,
+        "PmRrcConnLevelMaxSa": 0.0,
+        "PmRrcConnLevelSamp": 0.0,
+        "PmRrcConnLevelMaxNrDc": 0.0,
+        "PmEbsEndcSetupUeAtt": 0.0,
+        "PmEbsEndcSetupUeSucc": 0.0,
+        "PmEbsRrcConnLevelSumEnDc": 0.0
+      }    }
+  },
+  "1674817560000":
+  {
+    "SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00035,ManagedElement=LTE31dg2ERBS00035,ENodeBFunction=1,EUtranCellFDD=LTE31dg2ERBS00035-1":
+    {
+      "pmCounter": {
+        "PmEbsEndcSetupDrbAtt": 0.0,
+        "PmEndcSetupScgUeAtt": 0.0,
+        "PmRrcConnLevelSumNrDc": 0.0,
+        "PmEbsEndcSetupScgUeSucc": 0.0,
+        "PmEbsRrcConnLevelSamp": 0.0,
+        "PmEbsEndcSetupScgUeAtt": 0.0,
+        "PmEndcSetupUeAtt": 0.0,
+        "PmEbsEndcSetupScgDrbAtt": 0.0,
+        "PmEndcSetupUeSucc": 0.0,
+        "PmEbsEndcSetupScgDrbSucc": 0.0,
+        "PmRrcConnLevelMaxEnDc": 0.0,
+        "PmRrcConnLevelSumSa": 0.0,
+        "PmRrcConnLevelSumEnDc": 0.0,
+        "PmEndcSgnbAdditionRequest": 0.0,
+        "PmEbsEndcSetupDrbSucc": 0.0,
+        "PmEndcSetupScgUeSucc": 0.0,
+        "PmRrcConnLevelMaxSa": 0.0,
+        "PmRrcConnLevelSamp": 0.0,
+        "PmRrcConnLevelMaxNrDc": 0.0,
+        "PmEbsEndcSetupUeAtt": 0.0,
+        "PmEbsEndcSetupUeSucc": 0.0,
+        "PmEbsRrcConnLevelSumEnDc": 0.0
+      }    },
+    "SubNetwork=Europe,SubNetwork=Ireland,MeContext=LTE31dg2ERBS00045,ManagedElement=LTE31dg2ERBS00045,ENodeBFunction=1,EUtranCellTDD=LTE31dg2ERBS00045-1":
+    {
+      "pmCounter": {
+        "PmEbsEndcSetupDrbAtt": 0.0,
+        "PmEndcSetupScgUeAtt": 0.0,
+        "PmRrcConnLevelSumNrDc": 0.0,
+        "PmEbsEndcSetupScgUeSucc": 0.0,
+        "PmEbsRrcConnLevelSamp": 0.0,
+        "PmEbsEndcSetupScgUeAtt": 0.0,
+        "PmEndcSetupUeAtt": 0.0,
+        "PmEbsEndcSetupScgDrbAtt": 0.0,
+        "PmEndcSetupUeSucc": 0.0,
+        "PmEbsEndcSetupScgDrbSucc": 0.0,
+        "PmRrcConnLevelMaxEnDc": 0.0,
+        "PmRrcConnLevelSumSa": 0.0,
+        "PmRrcConnLevelSumEnDc": 0.0,
+        "PmEndcSgnbAdditionRequest": 0.0,
+        "PmEbsEndcSetupDrbSucc": 0.0,
+        "PmEndcSetupScgUeSucc": 0.0,
+        "PmRrcConnLevelMaxSa": 0.0,
+        "PmRrcConnLevelSamp": 0.0,
+        "PmRrcConnLevelMaxNrDc": 0.0,
+        "PmEbsEndcSetupUeAtt": 0.0,
+        "PmEbsEndcSetupUeSucc": 0.0,
+        "PmEbsRrcConnLevelSumEnDc": 0.0
+      }    }
+  }
+}

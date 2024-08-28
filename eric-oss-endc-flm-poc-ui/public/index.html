@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <title>Traffic Optimizer</title>
+    <script type="module">
+      import('@webcomponents/scoped-custom-element-registry');
+      import('es-module-shims');
+      // Import polyfill for firefox and safari
+      if (!window.URLPattern) {
+        import('urlpattern-polyfill');
+      }
+    </script>
+
+    <script type="importmap-shim">
+      {
+        "imports": {
+          "settings-panel.js": "./src/panels/settings-panel.js",
+          "@eui/container": "./node_modules/@eui/container/index.js",
+          "@eui/theme": "./node_modules/@eui/theme/index.js",
+          "traffic-optimizer": "./src/apps/traffic-optimizer/traffic-optimizer.js"
+        }
+      }
+    </script>
+    <script type="module-shim">
+      import '@eui/container';
+      import { Theme, Icon } from '@eui/theme';
+
+      import SystemProfile from './src/components/system-bar/profile.js';
+
+      Theme.register('eui-theme');
+      Icon.register('eui-icon');
+      SystemProfile.register();
+    </script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <script>
+      const body = document.querySelector('body');
+      body.addEventListener('eui-theme-change', event => {
+        const theme = document.querySelector('eui-theme');
+        theme.theme = event.detail.theme;
+      });
+    </script>
+    <eui-theme
+      theme="light"
+      font-path="./node_modules/@eui/theme/dist/fonts/"
+    ></eui-theme>
+    <eui-container default-app="traffic-optimizer">
+      <eui-icon name="econ" slot="system-left"></eui-icon>
+      <span slot="system-left">Traffic Optimizer</span>
+      <eui-system-bar-actions>
+        <system-profile></system-profile>
+      </eui-system-bar-actions>
+    </eui-container>
+    <script>
+      // load the config files into the Container...
+      const loadConfig = async () => {
+        // fetch config.json (public config file)...
+        const config = await fetch('./config.json').then(response =>
+          response.json(),
+        );
+        const euiContainer = document.querySelector('eui-container');
+        euiContainer.metaData = config;
+      };
+      loadConfig();
+    </script>
+  </body>
+</html>

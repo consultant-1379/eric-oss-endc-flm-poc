@@ -1,0 +1,177 @@
+#
+# COPYRIGHT Ericsson 2024
+#
+#
+#
+# The copyright to the computer program(s) herein is the property of
+#
+# Ericsson Inc. The programs may be used and/or copied only with written
+#
+# permission from Ericsson Inc. or in accordance with the terms and
+#
+# conditions stipulated in the agreement/contract under which the
+#
+# program(s) have been supplied.
+#
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "eric-oss-endc-flm-poc.fullname" . }}
+  labels:
+  {{- include "eric-oss-endc-flm-poc.labels" . | nindent 4 }}
+  annotations:
+  {{- include "eric-oss-endc-flm-poc.annotations" . | nindent 4 }}
+spec:
+{{- if not .Values.autoScaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+{{- end }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "eric-oss-endc-flm-poc.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  strategy:
+    type: {{ .Values.updateStrategy.type | quote }}
+    {{- if and (eq .Values.updateStrategy.type "RollingUpdate") .Values.updateStrategy.rollingUpdate }}
+    rollingUpdate:
+      maxUnavailable: {{ .Values.updateStrategy.rollingUpdate.maxUnavailable }}
+      maxSurge: {{ .Values.updateStrategy.rollingUpdate.maxSurge }}
+    {{- end }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "eric-oss-endc-flm-poc.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+        app.kubernetes.io/version: {{ include "eric-oss-endc-flm-poc.version" . }}
+        eric-data-object-storage-mn-access: "true"
+{{- include "eric-oss-endc-flm-poc.directStreamingLabel" . | indent 8 }}
+      annotations:
+{{- include "eric-oss-endc-flm-poc.prometheus" . | nindent 8 }}
+{{- include "eric-oss-endc-flm-poc.product-info" . | indent 8 }}
+{{- include "eric-oss-endc-flm-poc.config-annotations" . | indent 8 }}
+{{- include "eric-oss-endc-flm-poc.container-annotations" . | indent 8 }}
+    spec:
+      {{- if include "eric-oss-endc-flm-poc.pullSecret" . }}
+      imagePullSecrets:
+        - name: {{ include "eric-oss-endc-flm-poc.pullSecret" . | quote}}
+      {{- end }}
+      serviceAccountName: {{ template "eric-oss-endc-flm-poc.fullname" . }}
+      securityContext:
+        fsGroup: {{ include "eric-oss-endc-flm-poc.fsGroup.coordinated" . }}
+        {{- include "eric-oss-endc-flm-poc.seccomp-profile" . | indent 8 }}
+      volumes:
+        - name: tmp-volume
+          emptyDir: {}
+        {{- if .Values.clientId }}
+        - name: cacert-volume
+          secret:
+            secretName: {{ .Values.caSecretName }}
+        {{- end }}
+        - name: config-volume
+          configMap:
+            defaultMode: 493
+            name: {{ include "eric-oss-endc-flm-poc.name" . }}-configmap
+      restartPolicy: {{ .Values.restartPolicy.deployment }}
+      containers:
+        - name: eric-oss-endc-flm-poc
+          image: {{ template "eric-oss-endc-flm-poc.mainImagePath" . }}
+          imagePullPolicy: {{ template "eric-oss-endc-flm-poc.registryImagePullPolicy" . }}
+          securityContext: {{ include "eric-oss-endc-flm-poc.containerSecurityContext" . | nindent 12 }}
+          volumeMounts:
+            - mountPath: /tmp
+              name: tmp-volume
+            - name: config-volume
+              mountPath: /config
+            {{- if .Values.clientId }}
+            - name: cacert-volume
+              mountPath: /mnt/certs
+            {{- end }}
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          env:
+          - name: SERVICE_ID
+            value: {{ include "eric-oss-endc-flm-poc.name" . | quote}}
+          - name: JAVA_OPTS
+            value: {{ include "eric-oss-endc-flm-poc.jvmHeapSettings" . }}
+          - name: TZ
+            value: {{ template "eric-oss-endc-flm-poc.timezone" . }}
+          - name: DCC_ENABLED
+            value: {{ .Values.rappSdk.dcc.enabled | quote }}
+          {{- if and .Values.baseUrl .Values.clientId .Values.clientSecret }}
+          - name: BASE_URL
+            value: {{ .Values.baseUrl | replace "iam." "gas." | quote }}
+          - name: IAM_URL
+            value: {{ .Values.baseUrl | quote }}
+          - name: CLIENT_ID
+            value: {{ .Values.clientId | quote }}
+          - name: CLIENT_SECRET
+            value: {{ .Values.clientSecret | quote }}
+          {{- end }}
+          {{- if .Values.clientId }}
+          - name: CA_CERT_PATH
+            value: "file:/mnt/certs/{{ .Values.caSecretKey }}"
+          {{- end }}
+          {{- if .Values.configuration.objectStore.secret }}
+          - name: BDR_ACCESSKEY
+            valueFrom:
+              secretKeyRef:
+                name: {{ .Values.configuration.objectStore.secret | quote }}
+                key: accesskey
+          - name: BDR_SECRETKEY
+            valueFrom:
+              secretKeyRef:
+                name: {{ .Values.configuration.objectStore.secret | quote }}
+                key: secretkey
+          {{- end }}
+          - name: DB_URL
+            value: {{ include "eric-oss-endc-flm-poc.db-url" . | quote }}
+          - name: DB_USER
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "eric-oss-endc-flm-poc.fullname" . }}-database-pg-secret
+                key: custom-user
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: {{ include "eric-oss-endc-flm-poc.fullname" . }}-database-pg-secret
+                key: custom-pwd
+      {{- if .Values.global }}
+        {{- if .Values.global.security }}
+          {{- if .Values.global.security.tls }}
+            {{- if .Values.global.security.tls.enabled }}
+          - name: CONNECT_MODE
+            value: "tls"
+            {{- if (eq .Values.service.endpoints.chassisapi.tls.enforced "required") }}
+          - name: TLS_MODE
+            value: "only_tls"
+            {{- if (eq .Values.service.endpoints.chassisapi.tls.verifyClientCertificate "required") }}
+          - name: TLS_CA
+            value: "ca_path"
+            {{- end }}
+            {{- end }}
+            {{- end }}
+          {{- end }}
+        {{- end }}
+      {{- end }}
+      {{- include "eric-oss-endc-flm-poc.loggingEnv" . | indent 10 }}
+          resources: {{- include "eric-oss-endc-flm-poc.mainImageResourceAllocation" . | nindent 12 }}
+      nodeSelector: {{ include "eric-oss-endc-flm-poc.nodeSelector" . | nindent 6 -}}
+
+      {{- with .Values.terminationGracePeriodSeconds }}
+      terminationGracePeriodSeconds: {{- toYaml . | nindent 8 }}
+      {{- end }}
+
+      {{- with .Values.tolerations }}
+      tolerations: {{- toYaml . | nindent 8 }}
+      {{- end }}
+
+      {{- if (index .Values "podPriority" "eric-oss-endc-flm-poc" "priorityClassName") }}
+      priorityClassName: {{ (index .Values "podPriority" "eric-oss-endc-flm-poc" "priorityClassName") }}
+      {{- end }}
+
+      {{- with .Values.topologySpreadConstraints.deployment }}
+      topologySpreadConstraints: {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- include "eric-oss-endc-flm-poc.appAffinity" . | indent 6 }}

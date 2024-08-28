@@ -1,0 +1,458 @@
+{
+    "1674818460000": {
+        "allowList": [
+            {
+                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EUtranCellFDD=1",
+                "isBlocked": false
+            },
+            {
+                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EUtranCellTDD=1",
+                "isBlocked": false
+            },
+            {
+                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=2",
+                "isBlocked": false
+            }
+        ],
+        "cellData": {
+            "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EUtranCellTDD=1": {
+                "scgList": [
+                    {
+                        "arfcn": 620000,
+                        "freqTag": "FR1_n77_3300MHz",
+                        "totalCapacity": 60.0,
+                        "totalLoad": 461.0,
+                        "sCells": [
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=30": {
+                                    "capacity": 30.0,
+                                    "load": 230.0
+                                }
+                            },
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=31": {
+                                    "capacity": 30.0,
+                                    "load": 231.0
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "arfcn": 620200,
+                        "freqTag": "FR1_n77_3303MHz",
+                        "totalCapacity": 80.0,
+                        "totalLoad": 481.0,
+                        "sCells": [
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=40": {
+                                    "capacity": 40.0,
+                                    "load": 240.0
+                                }
+                            },
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=41": {
+                                    "capacity": 40.0,
+                                    "load": 241.0
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "profileData": {
+                    "oldProfileRef": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EndcDistrProfile=rApp_2",
+                    "newProfile": {
+                        "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EndcDistrProfile=rApp_2",
+                        "endcUserThreshold": 0,
+                        "gUtranFreqDistribution": [
+                            30,
+                            70
+                        ],
+                        "gUtranFreqRef": [
+                            {
+                                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,GUtraNetwork=1,GUtranSyncSignalFrequency=1",
+                                "arfcn": 620000,
+                                "band": 77
+                            },
+                            {
+                                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,GUtraNetwork=1,GUtranSyncSignalFrequency=3",
+                                "arfcn": 620200,
+                                "band": 77
+                            }
+                        ],
+                        "mandatoryGUtranFreqRef": []
+                    },
+                    "newProfileCreated": false,
+                    "status": "unchanged"
+                }
+            },
+            "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=2,EUtranCellFDD=1": {
+                "scgList": [
+                    {
+                        "arfcn": 621000,
+                        "freqTag": "FR1_n77_3315MHz",
+                        "totalCapacity": 100.0,
+                        "totalLoad": 501.0,
+                        "sCells": [
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=50": {
+                                    "capacity": 50.0,
+                                    "load": 250.0
+                                }
+                            },
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=51": {
+                                    "capacity": 50.0,
+                                    "load": 251.0
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "arfcn": 622000,
+                        "freqTag": "FR1_n77_3330MHz",
+                        "totalCapacity": 120.0,
+                        "totalLoad": 521.0,
+                        "sCells": [
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=60": {
+                                    "capacity": 60.0,
+                                    "load": 260.0
+                                }
+                            },
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=61": {
+                                    "capacity": 60.0,
+                                    "load": 261.0
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "profileData": {
+                    "oldProfileRef": "",
+                    "newProfile": {
+                        "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=2,EndcDistrProfile=rApp_1",
+                        "endcUserThreshold": 0,
+                        "gUtranFreqDistribution": [
+                            30,
+                            70
+                        ],
+                        "gUtranFreqRef": [
+                            {
+                                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=2,GUtraNetwork=1,GUtranSyncSignalFrequency=1",
+                                "arfcn": 621000,
+                                "band": 77
+                            },
+                            {
+                                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=2,GUtraNetwork=1,GUtranSyncSignalFrequency=2",
+                                "arfcn": 622000,
+                                "band": 77
+                            }
+                        ],
+                        "mandatoryGUtranFreqRef": []
+                    },
+                    "newProfileCreated": true,
+                    "status": "success"
+                }
+            },
+            "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EUtranCellFDD=1": {
+                "scgList": [
+                    {
+                        "arfcn": 620000,
+                        "freqTag": "FR1_n77_3300MHz",
+                        "totalCapacity": 20.0,
+                        "totalLoad": 421.0,
+                        "sCells": [
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=10": {
+                                    "capacity": 10.0,
+                                    "load": 210.0
+                                }
+                            },
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=11": {
+                                    "capacity": 10.0,
+                                    "load": 211.0
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "arfcn": 620100,
+                        "freqTag": "FR1_n77_3302MHz",
+                        "totalCapacity": 40.0,
+                        "totalLoad": 441.0,
+                        "sCells": [
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=20": {
+                                    "capacity": 20.0,
+                                    "load": 220.0
+                                }
+                            },
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=21": {
+                                    "capacity": 20.0,
+                                    "load": 221.0
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "profileData": {
+                    "oldProfileRef": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EndcDistrProfile=1",
+                    "newProfile": {
+                        "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EndcDistrProfile=1",
+                        "endcUserThreshold": 0,
+                        "gUtranFreqDistribution": [
+                            57,
+                            43
+                        ],
+                        "gUtranFreqRef": [
+                            {
+                                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,GUtraNetwork=1,GUtranSyncSignalFrequency=1",
+                                "arfcn": 620000,
+                                "band": 77
+                            },
+                            {
+                                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,GUtraNetwork=1,GUtranSyncSignalFrequency=2",
+                                "arfcn": 620100,
+                                "band": 77
+                            }
+                        ],
+                        "mandatoryGUtranFreqRef": []
+                    },
+                    "newProfileCreated": false,
+                    "status": "success"
+                }
+            }
+        }
+    },
+    "1674817560000": {
+        "allowList": [
+            {
+                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EUtranCellFDD=1",
+                "isBlocked": false
+            },
+            {
+                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EUtranCellTDD=1",
+                "isBlocked": false
+            },
+            {
+                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=2",
+                "isBlocked": false
+            }
+        ],
+        "cellData": {
+            "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EUtranCellTDD=1": {
+                "scgList": [
+                    {
+                        "arfcn": 620000,
+                        "freqTag": "FR1_n77_3300MHz",
+                        "totalCapacity": 60.0,
+                        "totalLoad": 261.0,
+                        "sCells": [
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=30": {
+                                    "capacity": 30.0,
+                                    "load": 130.0
+                                }
+                            },
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=31": {
+                                    "capacity": 30.0,
+                                    "load": 131.0
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "arfcn": 620200,
+                        "freqTag": "FR1_n77_3303MHz",
+                        "totalCapacity": 80.0,
+                        "totalLoad": 281.0,
+                        "sCells": [
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=40": {
+                                    "capacity": 40.0,
+                                    "load": 140.0
+                                }
+                            },
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=41": {
+                                    "capacity": 40.0,
+                                    "load": 141.0
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "profileData": {
+                    "oldProfileRef": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EndcDistrProfile=1",
+                    "newProfile": {
+                        "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EndcDistrProfile=rApp_2",
+                        "endcUserThreshold": 0,
+                        "gUtranFreqDistribution": [
+                            30,
+                            70
+                        ],
+                        "gUtranFreqRef": [
+                            {
+                                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,GUtraNetwork=1,GUtranSyncSignalFrequency=1",
+                                "arfcn": 620000,
+                                "band": 77
+                            },
+                            {
+                                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,GUtraNetwork=1,GUtranSyncSignalFrequency=3",
+                                "arfcn": 620200,
+                                "band": 77
+                            }
+                        ],
+                        "mandatoryGUtranFreqRef": []
+                    },
+                    "newProfileCreated": true,
+                    "status": "success"
+                }
+            },
+            "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=2,EUtranCellFDD=1": {
+                "scgList": [
+                    {
+                        "arfcn": 621000,
+                        "freqTag": "FR1_n77_3315MHz",
+                        "totalCapacity": 100.0,
+                        "totalLoad": 301.0,
+                        "sCells": [
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=50": {
+                                    "capacity": 50.0,
+                                    "load": 150.0
+                                }
+                            },
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=51": {
+                                    "capacity": 50.0,
+                                    "load": 151.0
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "arfcn": 622000,
+                        "freqTag": "FR1_n77_3330MHz",
+                        "totalCapacity": 120.0,
+                        "totalLoad": 321.0,
+                        "sCells": [
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=60": {
+                                    "capacity": 60.0,
+                                    "load": 160.0
+                                }
+                            },
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=61": {
+                                    "capacity": 60.0,
+                                    "load": 161.0
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "profileData": {
+                    "oldProfileRef": "",
+                    "newProfile": {
+                        "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=2,EndcDistrProfile=rApp_1",
+                        "endcUserThreshold": 0,
+                        "gUtranFreqDistribution": [
+                            30,
+                            70
+                        ],
+                        "gUtranFreqRef": [
+                            {
+                                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=2,GUtraNetwork=1,GUtranSyncSignalFrequency=1",
+                                "arfcn": 621000,
+                                "band": 77
+                            },
+                            {
+                                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=2,GUtraNetwork=1,GUtranSyncSignalFrequency=2",
+                                "arfcn": 622000,
+                                "band": 77
+                            }
+                        ],
+                        "mandatoryGUtranFreqRef": []
+                    },
+                    "newProfileCreated": false,
+                    "status": "failed_at_creating_profile"
+                }
+            },
+            "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EUtranCellFDD=1": {
+                "scgList": [
+                    {
+                        "arfcn": 620000,
+                        "freqTag": "FR1_n77_3300MHz",
+                        "totalCapacity": 20.0,
+                        "totalLoad": 221.0,
+                        "sCells": [
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=10": {
+                                    "capacity": 10.0,
+                                    "load": 110.0
+                                }
+                            },
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=11": {
+                                    "capacity": 10.0,
+                                    "load": 111.0
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "arfcn": 620100,
+                        "freqTag": "FR1_n77_3302MHz",
+                        "totalCapacity": 40.0,
+                        "totalLoad": 241.0,
+                        "sCells": [
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=20": {
+                                    "capacity": 20.0,
+                                    "load": 120.0
+                                }
+                            },
+                            {
+                                "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,GNBCUCPFunction=1,NRCellCU=21": {
+                                    "capacity": 20.0,
+                                    "load": 121.0
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "profileData": {
+                    "oldProfileRef": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EndcDistrProfile=1",
+                    "newProfile": {
+                        "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,EndcDistrProfile=1",
+                        "endcUserThreshold": 0,
+                        "gUtranFreqDistribution": [
+                            50,
+                            50
+                        ],
+                        "gUtranFreqRef": [
+                            {
+                                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,GUtraNetwork=1,GUtranSyncSignalFrequency=1",
+                                "arfcn": 620000,
+                                "band": 77
+                            },
+                            {
+                                "fdn": "SubNetwork=A,SubNetwork=B,MeContext=C,ManagedElement=D,ENodeBFunction=1,GUtraNetwork=1,GUtranSyncSignalFrequency=2",
+                                "arfcn": 620100,
+                                "band": 77
+                            }
+                        ],
+                        "mandatoryGUtranFreqRef": []
+                    },
+                    "newProfileCreated": false,
+                    "status": "success"
+                }
+            }
+        }
+    }
+}
